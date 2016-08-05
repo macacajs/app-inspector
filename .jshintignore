@@ -1,0 +1,7 @@
+.git/
+node_modules/
+coverage/
+build/
+assets/
+dist/
+public/3rdparty
