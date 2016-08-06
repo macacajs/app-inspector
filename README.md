@@ -19,6 +19,14 @@
 
 > app inspector
 
+## Android
+
+![](http://ww4.sinaimg.cn/large/6d308bd9gw1f6jev6p7eog20uo0k0npk.gif)
+
+## iOS
+
+![](http://ww2.sinaimg.cn/large/6d308bd9gw1f6jevlycr4g20uo0k0u13.gif)
+
 ## Installment
 
 ```shell
