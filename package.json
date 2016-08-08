@@ -1,6 +1,6 @@
 {
   "name": "app-inspector",
-  "version": "1.0.5",
+  "version": "1.0.10",
   "description": "app-inspector",
   "keywords": [
     "inspector"
@@ -20,19 +20,14 @@
     "co-request": "^1.0.0",
     "commander": "^2.9.0",
     "detect-port": "^1.0.0",
-    "ios-simulator": "^1.0.7",
     "koa": "^1.2.1",
     "koa-bodyparser": "^2.2.0",
     "koa-router": "^5.4.0",
     "koa-static": "^2.0.0",
-    "macaca-adb": "^1.0.17",
     "npm-update": "^1.0.2",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "request": "^2.74.0",
-    "uiautomator-client": "^1.0.16",
-    "webdriveragent": "^1.0.12",
-    "xctest-client": "^1.0.16",
     "xlogger": "^1.0.4",
     "xml2map": "^1.0.2",
     "xutil": "^1.0.1"
@@ -56,5 +51,12 @@
   "author": "xudafeng",
   "email": "xudafeng@126.com",
   "blog": "http://xdf.me",
-  "license": "MIT"
+  "license": "MIT",
+  "optionalDependencies": {
+    "ios-simulator": "^1.0.7",
+    "macaca-adb": "^1.0.17",
+    "uiautomator-client": "^1.0.16",
+    "webdriveragent": "^1.0.12",
+    "xctest-client": "^1.0.16"
+  }
 }

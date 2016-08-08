@@ -4,4 +4,4 @@ coverage/
 build/
 assets/
 dist/
-public/3rdparty
+public

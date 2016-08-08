@@ -26,6 +26,12 @@
 
 ## Installment
 
+Verify the environment with [macaca-cli](http://macacajs.github.io/macaca/environment-setup.html).
+
+```shell
+$ macaca doctor
+```
+
 ```shell
 $ npm i app-inspector -g
 ```
