@@ -7,7 +7,7 @@
   "eqnull": true,
   "strict": true,
   "undef": true,
-  "unused": true,
+  "unused": "vars",
   "laxcomma": false,
   "asi": false,
   "boss": false,
