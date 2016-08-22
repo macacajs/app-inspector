@@ -13,11 +13,6 @@ class Layout extends React.Component {
         <Meta {...this.props}/>
         <body>
           <Header {...this.props}/>
-          <div className="ribbon">
-            <a target="_blank" href="https://github.com/xudafeng">
-              Fork me on Github
-            </a>
-          </div>
           <div id="content">
             {this.props.children}
           </div>

@@ -43,37 +43,6 @@
 #tree {
   overflow-x: scroll;
 }
-.ribbon {
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-  z-index:9999;
-}
-.ribbon a {
-  display: inline-block;
-  width: 200px;
-  overflow: hidden;
-  padding: 6px 0;
-  text-align: center;-webkit-transform:rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -transform: rotate(45deg);
-  text-decoration: none;
-  color: #fff;
-  position: inherit;
-  top: 40px;
-  right: -40px;
-  border-width: 1px 0;
-  border-style: dotted;
-  border-color: rgba(255, 255, 255, 0.7);
-  font: 700 13px &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
-  background-color: #a00;
-}
 footer {
   border-top: 1px solid #eee;
   padding: 10px 0;
