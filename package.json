@@ -1,9 +1,10 @@
 {
   "name": "app-inspector",
-  "version": "1.0.11",
-  "description": "app-inspector",
+  "version": "1.0.12",
+  "description": "app inspector",
   "keywords": [
-    "inspector"
+    "inspector",
+    "macaca"
   ],
   "bin": {
     "inspector": "./bin/app-inspector",
@@ -11,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/xudafeng/app-inspector.git"
+    "url": "git://github.com/macacajs/app-inspector.git"
   },
   "dependencies": {
     "babel": "~5.6.14",
@@ -47,10 +48,7 @@
   "pre-commit": [
     "jshint"
   ],
-  "homepage": "https://github.com/xudafeng/app-inspector",
-  "author": "xudafeng",
-  "email": "xudafeng@126.com",
-  "blog": "http://xdf.me",
+  "homepage": "https://github.com/macacajs/app-inspector",
   "license": "MIT",
   "optionalDependencies": {
     "ios-simulator": "^1.0.7",

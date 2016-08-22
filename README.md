@@ -8,10 +8,10 @@
 
 [npm-image]: https://img.shields.io/npm/v/app-inspector.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/app-inspector
-[travis-image]: https://img.shields.io/travis/xudafeng/app-inspector.svg?style=flat-square
-[travis-url]: https://travis-ci.org/xudafeng/app-inspector
-[coveralls-image]: https://img.shields.io/coveralls/xudafeng/app-inspector.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/xudafeng/app-inspector?branch=master
+[travis-image]: https://img.shields.io/travis/macacajs/app-inspector.svg?style=flat-square
+[travis-url]: https://travis-ci.org/macacajs/app-inspector
+[coveralls-image]: https://img.shields.io/coveralls/macacajs/app-inspector.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/macacajs/app-inspector?branch=master
 [node-image]: https://img.shields.io/badge/node.js-%3E=_4-green.svg?style=flat-square
 [node-url]: http://nodejs.org/download/
 [download-image]: https://img.shields.io/npm/dm/app-inspector.svg?style=flat-square
@@ -72,10 +72,8 @@ Or you can connect your real device with USB.
 $ adb devices
 ```
 
-Further help: [native-in-practice](http://xudafeng.github.io/slide/archives/native-in-practice/)
+Further help: [native-in-practice](http://macacajs.github.io/slide/archives/native-in-practice/)
 
 ## License
 
 The MIT License (MIT)
-
-Copyright (c) 2015 xdf
