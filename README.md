@@ -72,8 +72,6 @@ Or you can connect your real device with USB.
 $ adb devices
 ```
 
-Further help: [native-in-practice](http://macacajs.github.io/slide/archives/native-in-practice/)
-
 ## License
 
 The MIT License (MIT)
