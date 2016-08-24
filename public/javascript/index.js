@@ -168,7 +168,26 @@ Inspector.prototype.getXML = function() {
   });
 };
 
+Inspector.prototype.getXPath = function(node) {
+  var treeview = this.treeElement.treeview(true);
+  var current = node;
+  var array = [];
+
+  while (current) {
+    array.unshift(current.class + '[' + (~~current.index + 1) +  ']');
+    var parentId = current.parentId;
+    if (parentId == null) {
+      current = null;
+    } else {
+      current = treeview.getNode(parentId);
+    }
+  }
+
+  return '//' + array.join('/');
+},
+
 Inspector.prototype.updateInfo = function(data) {
+  var xpath = this.getXPath(data);
   var blackList = ['index', 'text', 'nodes', 'state', 'nodeId', 'parentId', 'rect'];
   var html = '<ul>';
   $.each(data, function(k, v) {
@@ -176,6 +195,7 @@ Inspector.prototype.updateInfo = function(data) {
       html += '<li>' + k + '<span class="pull-right">' + v + '</span>' + '</li>';
     }
   });
+  html += '<li>XPath<span class="pull-right">' + xpath + '</span>' + '</li>';
   html += '</ul>';
   this.infoElement.html(html);
 };
@@ -190,13 +210,13 @@ Inspector.prototype.searchNode = function(originPos) {
     if (selectedNode) {
       this.treeElement.treeview('unselectNode', selectedNode);
     }
-    this.treeElement.treeview('clearSearch')
+    var nodes = this.treeElement.treeview('clearSearch')
       .treeview('search', [data.text, {
         ignoreCase: true,
         exactMatch: false,
         revealResults: true,
       }]);
-    this.updateInfo(data);
+    this.updateInfo(nodes[0]);
   }
 };
 
