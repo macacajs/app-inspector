@@ -17,60 +17,30 @@
 [download-image]: https://img.shields.io/npm/dm/app-inspector.svg?style=flat-square
 [download-url]: https://npmjs.org/package/app-inspector
 
-> app inspector
+[App-inspector](https://macacajs.github.io/app-inspector/) is a mobile UI viewer in browser.
 
-## Demo
+## Installation
 
-- [Android](http://ww4.sinaimg.cn/large/6d308bd9gw1f6jev6p7eog20uo0k0npk.gif)
-- [iOS](http://ww2.sinaimg.cn/large/6d308bd9gw1f6jevlycr4g20uo0k0u13.gif)
-
-## Installment
-
-Verify the environment with [macaca-cli](http://macacajs.github.io/macaca/environment-setup.html).
+App-inspector is distibuted through npm. To install it, run the following command line:
 
 ```shell
-$ macaca doctor
-```
-
-```shell
-$ npm i app-inspector -g
+$ npm install app-inspector -g
 ```
 
 ## Usage
 
 ```shell
-app-inspector -u xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+$ app-inspector -u xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
-### iOS
+## Home Page
 
-List available devices, device types, runtimes, or device pairs.
+Visit https://macacajs.github.io/app-inspector/ for more information.
 
-```shell
-# Then get the UDID of your simulator.
-$ xcrun simctl list
-# Other commands
-$ xcrun simctl boot "${this.deviceId}"
-$ open -a Simulator --args -CurrentDeviceUDID "${this.deviceId}"
-$ xcrun simctl shutdown "${this.deviceId}"
-```
+## Demo
 
-Find UDID of real iPhone or iPad by single tap with iTunes, supports sending HTTP requests via USB in cases when your devices have restricted access to Wifi.
-
-### Android
-
-```shell
-# launch an emulator
-$ android list avd
-$ emulator -avd xxx
-```
-
-Or you can connect your real device with USB.
-
-```shell
-# Then get the UDID of your Android devices.
-$ adb devices
-```
+- [Android](http://ww4.sinaimg.cn/large/6d308bd9gw1f6jev6p7eog20uo0k0npk.gif)
+- [iOS](http://ww2.sinaimg.cn/large/6d308bd9gw1f6jevlycr4g20uo0k0u13.gif)
 
 ## License
 
