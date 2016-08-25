@@ -168,19 +168,38 @@ Inspector.prototype.getXML = function() {
   });
 };
 
+Inspector.prototype.getIndex = function(node, nodes) {
+  var index = 0;
+  for (var i = 0; i < nodes.length; i++) {
+    var item = nodes[i];
+    if (item.class === node.class) {
+      index++;
+    }
+    if (node.nodeId === item.nodeId) {
+      break;
+    }
+  }
+
+  return index;
+};
+
 Inspector.prototype.getXPath = function(node) {
   var treeview = this.treeElement.treeview(true);
   var current = node;
+  var parent;
   var array = [];
 
   while (current) {
-    array.unshift(current.class + '[' + (~~current.index + 1) +  ']');
     var parentId = current.parentId;
     if (parentId == null) {
-      current = null;
+      parent = null;
     } else {
-      current = treeview.getNode(parentId);
+      parent = treeview.getNode(parentId);
     }
+
+    var index = parent ? this.getIndex(current, parent.nodes) : 1;
+    array.unshift(current.class + '[' + index +  ']');
+    current = parent;
   }
 
   return '//' + array.join('/');
