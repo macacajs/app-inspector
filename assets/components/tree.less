@@ -1,0 +1,64 @@
+.tree-list  {
+  list-style: none;
+  margin: 0;
+  cursor: default;
+}
+
+
+.tree-tag-open,
+.tree-tag-close {
+  height: 16px;
+  line-height: 16px;
+  vertical-align: top;
+}
+
+.tree-line {
+  position: relative;
+  font-size: 12px;
+
+  &:hover {
+    background: #eee;
+  }
+
+  white-space: nowrap;
+}
+
+.tree-indent {
+  display: inline-block;
+  height: 16px;
+  padding-left: 30px;
+  vertical-align: top;
+}
+
+.tree-trigger {
+  position: absolute;
+  visibility: hidden;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  top: 50%;
+  margin-top: -6px;
+  margin-left: -15px;
+  border: 5px solid transparent;
+  border-left: 8px solid #ddd;
+
+  &:hover {
+    border-left-color: #666;
+  }
+}
+
+.tree-has-child > div > .tree-trigger {
+  visibility: visible;
+}
+
+.tree-open > div > .tree-trigger {
+  transform: rotate(90deg);
+  transform-origin: 3px 5px;
+}
+
+.tree-selected {
+  > .tree-line {
+    background: #666!important;
+    color: #fff;
+  }
+}
