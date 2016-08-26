@@ -15,7 +15,6 @@
     "url": "git://github.com/macacajs/app-inspector.git"
   },
   "dependencies": {
-    "babel": "~5.6.14",
     "chalk": "^1.1.3",
     "co": "^4.6.0",
     "co-request": "^1.0.0",
@@ -26,24 +25,40 @@
     "koa-router": "^5.4.0",
     "koa-static": "^2.0.0",
     "npm-update": "^1.0.2",
-    "react": "^15.2.1",
-    "react-dom": "^15.2.1",
+    "nunjucks": "^2.4.2",
     "request": "^2.74.0",
     "xlogger": "^1.0.4",
     "xml2map": "^1.0.2",
     "xutil": "^1.0.1"
   },
   "devDependencies": {
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
     "co-mocha": "*",
-    "mocha": "*",
-    "should": "*",
-    "jshint": "*",
+    "css-loader": "^0.24.0",
+    "es6-promise": "^3.2.1",
     "istanbul": "*",
-    "pre-commit": "1.1.1"
+    "jshint": "*",
+    "koa-webpack-dev-middleware": "^1.2.2",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "mocha": "*",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "pre-commit": "1.1.1",
+    "should": "*",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-middleware": "^1.6.1",
+    "whatwg-fetch": "^1.0.0"
   },
   "scripts": {
     "test": "make test",
-    "jshint": "make jshint"
+    "jshint": "make jshint",
+    "start": "APP_INSPECTOR=dev ./bin/app-inspector -u UID --verbose",
+    "build": "webpack -p"
   },
   "pre-commit": [
     "jshint"
