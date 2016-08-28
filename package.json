@@ -51,7 +51,6 @@
     "should": "*",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
-    "webpack-dev-middleware": "^1.6.1",
     "whatwg-fetch": "^1.0.0"
   },
   "scripts": {
