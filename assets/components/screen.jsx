@@ -1,6 +1,11 @@
 import React, { PureComponent } from 'react';
 import './screen.less';
 
+// TODO: should by device name.
+function getIOSDprByScreenWidth(width) {
+  return width > 1000 ? 3 : 2;
+}
+
 export default class Screen extends PureComponent {
 
   constructor() {
@@ -15,10 +20,10 @@ export default class Screen extends PureComponent {
 
   get rate() {
     /**
-     * iOS: bounds width = 320, image width = 640
-     * Android: bounds width = 720, image width = 720
+     * iOS: bounds-width = 320 but image-width = 640
+     * Android: bounds-width = 720 and image-width = 720
      */
-    return this.props.isIOS ? 2 : 1;
+    return this.props.isIOS ? getIOSDprByScreenWidth(this.state.width) : 1;
   }
 
   handleImageLoad() {
