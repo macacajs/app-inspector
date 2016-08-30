@@ -22,6 +22,15 @@ export function parseBounds(boundsStr, isIOS) {
   };
 };
 
+export function formatFrameBounds(frameBounds) {
+  return frameBounds && [
+    frameBounds.leftTop.x,
+    frameBounds.leftTop.y,
+    frameBounds.rightBottom.x,
+    frameBounds.rightBottom.y
+  ].join(',');
+};
+
 export function boundsSize(bounds) {
   const { leftTop, rightBottom } = bounds;
   return (rightBottom.x - leftTop.x) * (rightBottom.y - leftTop.y);

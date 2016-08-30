@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { formatFrameBounds } from '../libs/bounds';
 import './screen.less';
 
 // TODO: should by device name.
@@ -32,7 +33,8 @@ export default class Screen extends PureComponent {
       height: this.refs.image.naturalHeight,
     }, () => {
       console.info('iOS', this.props.isIOS);
-      console.info('image-width', this.state.width, this.rate);
+      console.info('image-width-height', this.state.width,  this.state.height);
+      console.info('dpr', this.rate);
     });
     this.initCanvas();
   }
@@ -42,6 +44,7 @@ export default class Screen extends PureComponent {
   }
 
   paintFrame(frameBounds, style) {
+    console.info('frameBounds', formatFrameBounds(frameBounds));
     const rate = this.rate;
     const cxt = this.cxt;
     cxt.clearRect(0, 0, this.state.width, this.state.height);
