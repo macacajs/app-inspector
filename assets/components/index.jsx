@@ -70,7 +70,7 @@ class App extends Component {
 
   resizeTreeViewport() {
     setTimeout(() => {
-      this.setState({
+      this.refs.treeScroller && this.setState({
         treeViewPortWidth: this.refs.treeScroller.scrollWidth
       });
     });
