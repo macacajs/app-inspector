@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Screen from './screen';
 import Tree from './tree';
 import Info from './info';
+import AppInfo from './app-info';
 import { parseBounds, getNodePathByXY } from '../libs/bounds';
 import getXPath from '../libs/xpath';
 
@@ -76,34 +77,41 @@ class App extends Component {
   }
 
   render() {
-    return this.state.tree ? (
+    return (
       <div className="container">
-        <div className="flex-col">
-          <Screen
-            frame={this.state.focusBounds}
-            onClick={this.handleCanvasClick.bind(this)}
-            isIOS={this.state.isIOS}
-            src={ this.state.isIOS ? '/ios-screenshot.png' : '/android-screenshot.png' }
-          />
-        </div>
-        <div className="flex-col" ref="treeScroller">
-          <Tree
-            ref="tree"
-            width={this.state.treeViewPortWidth}
-            onSelect={this.handleTreeSelect.bind(this)}
-            onNodeMouseEnter={this.handleMouseEnter.bind(this)}
-            onNodeMouseLeave={this.handleMouseLeave.bind(this)}
-            initialData={this.state.tree}
-          />
-        </div>
-        { this.state.node ? (
-          <div className="flex-col">
-            <Info node={this.state.node} XPath={this.state.XPath}/>
-          </div>
-        ) : null }
+        {
+          this.state.tree ? (
+            <div className="main">
+              <div className="flex-col">
+                <Screen
+                  frame={this.state.focusBounds}
+                  onClick={this.handleCanvasClick.bind(this)}
+                  isIOS={this.state.isIOS}
+                  src={ this.state.isIOS ? '/ios-screenshot.png' : '/android-screenshot.png' }
+                />
+              </div>
+              <div className="flex-col" ref="treeScroller">
+                <Tree
+                  ref="tree"
+                  width={this.state.treeViewPortWidth}
+                  onSelect={this.handleTreeSelect.bind(this)}
+                  onNodeMouseEnter={this.handleMouseEnter.bind(this)}
+                  onNodeMouseLeave={this.handleMouseLeave.bind(this)}
+                  initialData={this.state.tree}
+                />
+              </div>
+              { this.state.node ? (
+                <div className="flex-col">
+                  <Info node={this.state.node} XPath={this.state.XPath}/>
+                </div>
+              ) : null }
+            </div>
+          ) : (
+            <div className="loading">Waiting Device start...</div>
+          )
+        }
+        <AppInfo/>
       </div>
-    ) : (
-      <div className="loading">Waiting Device start...</div>
     );
   }
 }

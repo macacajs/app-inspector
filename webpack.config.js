@@ -1,5 +1,4 @@
 const path = require('path');
-const config = require('./lib/config');
 
 module.exports = {
   entry: {
@@ -29,11 +28,12 @@ module.exports = {
         test: /\.jsx?$/,
         loader: 'babel',
         exclude: /node_modules/
+      },
+      {
+        test: /\.json$/,
+        loader: 'json',
+        exclude: /node_modules/
       }
     ]
-  },
-  devServer: {
-    port: config.devServerPort
-  },
-  // devtool: 'source-map'
+  }
 };

@@ -39,8 +39,8 @@ Visit https://macacajs.github.io/app-inspector/ for more information.
 
 ## Demo
 
-- [Android](http://ww4.sinaimg.cn/large/6d308bd9gw1f6jev6p7eog20uo0k0npk.gif)
-- [iOS](http://ww2.sinaimg.cn/large/6d308bd9gw1f6jevlycr4g20uo0k0u13.gif)
+- [Android](http://ww4.sinaimg.cn/large/7dfcf2f7gw1f7bwlhpakwg20s40kge3k.gif)
+- [iOS](http://ww4.sinaimg.cn/large/7dfcf2f7gw1f7bwp1mgiyg20s40kg7wh.gif)
 
 ## License
 
