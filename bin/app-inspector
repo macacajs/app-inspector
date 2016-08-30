@@ -9,6 +9,7 @@ const update = require('npm-update');
 
 const pkg = require('../package.json');
 const _ = require('../lib/common/helper');
+const logger = require('../lib/common/logger');
 
 const Inspector = require('..');
 
@@ -60,7 +61,7 @@ function init(error, data) {
 
   _.merge(options, _.getConfig(program));
 
-  co(Inspector, options);
+  co(Inspector, options).catch(e => logger.error(e));
 }
 
 co(update, {

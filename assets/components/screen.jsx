@@ -30,6 +30,9 @@ export default class Screen extends PureComponent {
     this.setState({
       width: this.refs.image.naturalWidth,
       height: this.refs.image.naturalHeight,
+    }, () => {
+      console.info('iOS', this.props.isIOS);
+      console.info('image-width', this.state.width, this.rate);
     });
     this.initCanvas();
   }
