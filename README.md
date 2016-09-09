@@ -42,6 +42,9 @@ Visit https://macacajs.github.io/app-inspector/ for more information.
 - [Android](http://ww4.sinaimg.cn/large/7dfcf2f7gw1f7bwlhpakwg20s40kge3k.gif)
 - [iOS](http://ww4.sinaimg.cn/large/7dfcf2f7gw1f7bwp1mgiyg20s40kg7wh.gif)
 
+## 真机
+因为证书等问题，iOS 真机暂不可用。
+
 ## License
 
 The MIT License (MIT)
