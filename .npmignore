@@ -4,6 +4,7 @@ node_modules
 .travis.yml
 .drone.yml
 examples/
+assets/
 Makefile
 .jshintrc
 .jshintignore
