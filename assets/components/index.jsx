@@ -3,7 +3,7 @@ import Screen from './screen';
 import Tree from './tree';
 import Info from './info';
 import AppInfo from './app-info';
-import { parseBounds, getNodePathByXY } from '../libs/bounds';
+import { getNodePathByXY } from '../libs/bounds';
 import getXPath from '../libs/xpath';
 
 const { appData } = window;
@@ -43,7 +43,7 @@ class App extends Component {
 
     this.setState({
       node,
-      focusBounds: parseBounds(node.bounds, isIOS),
+      focusBounds: node.bounds,
       XPath: getXPath(tree, nodePath, isIOS),
     });
     this.resizeTreeViewport();
@@ -51,7 +51,7 @@ class App extends Component {
 
   handleMouseEnter(node) {
     this.setState({
-      focusBounds: parseBounds(node.bounds, this.state.isIOS)
+      focusBounds: node.bounds
     });
   }
 
