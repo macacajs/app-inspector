@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import { formatFrameBounds } from '../libs/bounds';
 import './screen.less';
 
 // TODO: should by device name.
@@ -44,7 +43,7 @@ export default class Screen extends PureComponent {
   }
 
   paintFrame(frameBounds, style) {
-    console.info('frameBounds', formatFrameBounds(frameBounds));
+    console.info('frameBounds', frameBounds);
     const rate = this.rate;
     const cxt = this.cxt;
     cxt.clearRect(0, 0, this.state.width, this.state.height);
@@ -52,14 +51,8 @@ export default class Screen extends PureComponent {
 
     cxt.fillStyle = 'red';
     cxt.globalAlpha = 0.5;
-    const { leftTop, rightBottom } = frameBounds;
 
-    cxt.fillRect(
-      leftTop.x * rate,
-      leftTop.y * rate,
-      (rightBottom.x * rate - leftTop.x * rate),
-      (rightBottom.y * rate - leftTop.y * rate)
-    );
+    cxt.fillRect.apply(cxt, frameBounds.map(x => x * rate));
   }
 
   handleClick(e) {
