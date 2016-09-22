@@ -22,6 +22,7 @@ const EOL = require('os').EOL;
 program
   .option('-p, --port <d>',     'port to use (5678 default)')
   .option('-u, --udid <s>',     'udid of device')
+  .option('-s, --silent',       'start without opening browser')
   .option('--verbose',          'show more debugging information')
   .option('-v, --versions',     'output version infomation')
   .usage('');
