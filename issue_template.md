@@ -1,3 +1,5 @@
+**真机问题先参考 https://testerhome.com/topics/5953**
+
 - app inspector version / 版本号:
 
 
