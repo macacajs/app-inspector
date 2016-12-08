@@ -1,6 +1,6 @@
 {
   "name": "app-inspector",
-  "version": "1.2.16",
+  "version": "1.2.17",
   "description": "app inspector",
   "keywords": [
     "inspector",
@@ -59,7 +59,8 @@
     "test": "make test",
     "jshint": "make jshint",
     "start": "APP_INSPECTOR=dev ./bin/app-inspector -u UID --verbose",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "prepublish": "npm run build"
   },
   "pre-commit": [
     "jshint"
