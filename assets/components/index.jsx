@@ -79,6 +79,11 @@ class App extends Component {
   render() {
     return (
       <div className="container">
+        <div className="header">
+          <a href="//macacajs.github.io/inspector" target="_blank">
+            <h1>Macaca App Inspector</h1>
+          </a>
+        </div>
         {
           this.state.tree ? (
             <div className="main">
