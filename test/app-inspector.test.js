@@ -20,6 +20,7 @@ const getOutPut = function(udid) {
     child.stdout.setEncoding('utf8');
     child.stderr.setEncoding('utf8');
     child.stdout.on('data', data => {
+      console.log(data);
       res += data;
       if (!!~res.indexOf(androidStartString)) {
         resolve(res);
