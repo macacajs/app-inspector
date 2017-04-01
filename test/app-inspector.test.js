@@ -4,11 +4,15 @@ const path = require('path');
 const EOL = require('os').EOL;
 const CliTest = require('command-line-test');
 
+const utils = require('./utils');
 const pkg = require('../package');
 
 const binFile = path.resolve(pkg.bin[pkg.name]);
 
-describe('command-line test', function() {
+const startString = 'inspector start at:';
+
+describe('command line test', function() {
+  this.timeout(5 * 60 * 1000);
 
   it('`app-inspector -v` should be ok', function *() {
     var cliTest = new CliTest();
@@ -23,4 +27,9 @@ describe('command-line test', function() {
     lines[0].should.containEql(pkg.name);
   });
 
+  it('app-inspector start should be ok', function *() {
+    var device = yield utils.getDevices();
+    var res = yield utils.getOutPut(device.udid);
+    res.should.containEql(startString);
+  });
 });
