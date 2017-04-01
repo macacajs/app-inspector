@@ -63,7 +63,9 @@ function init(error, data) {
 
   _.merge(options, _.getConfig(program));
 
-  co(Inspector, options).catch(e => logger.error(e));
+  co(Inspector, options).catch(e => {
+    console.log(e);
+  });
 }
 
 co(update, {
