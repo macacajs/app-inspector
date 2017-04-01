@@ -12,7 +12,7 @@ const binFile = path.resolve(pkg.bin[pkg.name]);
 const startString = 'inspector start at:';
 
 describe('command line test', function() {
-  this.timeout(5 * 60 * 1000);
+  this.timeout(60 * 1000);
 
   it('`app-inspector -v` should be ok', function *() {
     var cliTest = new CliTest();
