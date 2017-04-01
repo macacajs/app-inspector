@@ -14,16 +14,17 @@ const startString = 'inspector start at:';
 
 exports.getDevices = function *() {
   var matchedDevice = null;
+  var devices;
 
   if (isIOS) {
-    var devices = yield Simulator.getDevices();
+    devices = yield Simulator.getDevices();
     devices.forEach(function(device) {
       if (device.name === 'iPhone 6' && device.available) {
         matchedDevice = device;
       }
     });
   } else {
-    var devices = yield ADB.getDevices();
+    devices = yield ADB.getDevices();
     matchedDevice = devices[0];
   }
   return matchedDevice;
