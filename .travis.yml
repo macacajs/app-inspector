@@ -27,7 +27,7 @@ matrix:
           - nvm install 7
           - brew install ios-webkit-debug-proxy
         script:
-          - make travis
+          - PLATFORM=ios make travis
       - os: linux
         env: TEST_SUITE=android
         jdk: openjdk7
@@ -54,4 +54,4 @@ matrix:
           - android-wait-for-emulator
           - adb shell input keyevent 82 &
         script:
-          - make travis
+          - PLATFORM=android make travis
