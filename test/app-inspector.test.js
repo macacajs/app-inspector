@@ -3,32 +3,16 @@
 const path = require('path');
 const EOL = require('os').EOL;
 const CliTest = require('command-line-test');
-const child_process = require('child_process');
 
 const utils = require('./utils');
 const pkg = require('../package');
 
 const binFile = path.resolve(pkg.bin[pkg.name]);
 
-const androidStartString = 'inspector start at:';
+const startString = 'inspector start at:';
 
-const getOutPut = function(udid) {
-  return new Promise((resolve, reject) => {
-    let res = '';
-    const child = child_process.spawn(binFile, ['-u', udid, '-s']);
-
-    child.stdout.setEncoding('utf8');
-    child.stderr.setEncoding('utf8');
-    child.stdout.on('data', data => {
-      console.log(data);
-      res += data;
-      if (!!~res.indexOf(androidStartString)) {
-        resolve(res);
-      }
-    });
-  });
-};
 describe('command line test', function() {
+  this.timeout(5 * 60 * 1000);
 
   it('`app-inspector -v` should be ok', function *() {
     var cliTest = new CliTest();
@@ -43,9 +27,9 @@ describe('command line test', function() {
     lines[0].should.containEql(pkg.name);
   });
 
-  it('app-inspector -u should be ok', function *() {
+  it('app-inspector start should be ok', function *() {
     var device = yield utils.getDevices();
-    var res = yield getOutPut(device.udid);
-    res.should.containEql(androidStartString);
+    var res = yield utils.getOutPut(device.udid);
+    res.should.containEql(startString);
   });
 });
