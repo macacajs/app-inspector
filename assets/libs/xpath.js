@@ -25,7 +25,10 @@ export default function getXpath(tree, nodePath, isIOS) {
 
     const tagName = (isIOS ? 'XCUIElementType' : '') + current.class;
 
-    array.push(tagName + '[' + index +  ']');
+    if (current.class !== 'MacacaAppInspectorRoot') {
+      array.push(tagName + '[' + index +  ']');
+    }
+
     nodes = current.nodes;
   }
 

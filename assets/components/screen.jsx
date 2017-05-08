@@ -61,7 +61,7 @@ export default class Screen extends PureComponent {
 
     this.props.onClick(
       (e.clientX - this.canvas.offsetLeft) * scale / rate,
-      (e.clientY - this.canvas.offsetTop )* scale / rate
+      (e.clientY - this.canvas.offsetTop) * scale / rate
     );
   }
 
@@ -95,7 +95,6 @@ export default class Screen extends PureComponent {
       </div>
     );
   }
-
 };
 
 Screen.defaultProps = {

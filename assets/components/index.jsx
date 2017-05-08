@@ -16,7 +16,7 @@ class App extends Component {
     this.state = {
       node: null,
       tree: null,
-      XPath: null,
+      xpath: null,
       focusBounds: null,
       treeViewPortWidth: null,
       isIOS: appData.isIOS,
@@ -44,7 +44,7 @@ class App extends Component {
     this.setState({
       node,
       focusBounds: node.bounds,
-      XPath: getXPath(tree, nodePath, isIOS),
+      xpath: getXPath(tree, nodePath, isIOS),
     });
     this.resizeTreeViewport();
   }
@@ -107,7 +107,7 @@ class App extends Component {
               </div>
               { this.state.node ? (
                 <div className="flex-col">
-                  <Info node={this.state.node} XPath={this.state.XPath}/>
+                  <Info node={this.state.node} xpath={this.state.xpath}/>
                 </div>
               ) : null }
             </div>

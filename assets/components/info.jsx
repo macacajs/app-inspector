@@ -13,8 +13,8 @@ export default class App extends PureComponent {
     }));
 
     array.push({
-      key: 'XPath',
-      text: this.props.XPath
+      key: 'xpath',
+      text: this.props.xpath
     });
 
     return array;
