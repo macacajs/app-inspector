@@ -19,7 +19,7 @@ matrix:
       - os: osx
         env: TEST_SUITE=ios
         osx_image: xcode8.3
-        language: objective-c
+        language: swift
         before_install:
           - brew update
           - brew install nvm
