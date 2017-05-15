@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import './info.less';
 
-const blackList = ['index', 'text', 'nodes', 'selected', 'open', 'state', 'nodeId', 'parentId', 'rect'];
+const blackList = ['index', 'nodes', 'selected', 'open', 'state', 'nodeId', 'parentId', 'rect'];
 
 export default class App extends PureComponent {
 

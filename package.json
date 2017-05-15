@@ -75,6 +75,6 @@
     "ios-utils": "^1.0.4",
     "macaca-adb": "^1.0.17",
     "uiautomatorwd": "^1.0.1",
-    "xctest-client": "^1.0.16"
+    "xctestwd": "^1.0.7"
   }
 }
