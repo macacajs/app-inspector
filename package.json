@@ -62,6 +62,7 @@
     "jshint": "make jshint",
     "start": "APP_INSPECTOR=dev ./bin/app-inspector -u UID --verbose",
     "build": "webpack -p",
+    "watch": "webpack --watch",
     "prepublish": "npm run build"
   },
   "pre-commit": [
