@@ -51,6 +51,7 @@
     "mocha": "*",
     "pre-commit": "1.1.1",
     "react": "^15.2.1",
+    "react-copy-to-clipboard": "^5.0.0",
     "react-dom": "^15.2.1",
     "should": "*",
     "style-loader": "^0.13.1",

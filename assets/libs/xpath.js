@@ -9,9 +9,11 @@ function getChildIndex(node, nodes) {
 
   for (var i = 0; i < nodes.length; i++) {
     var item = nodes[i];
+
     if (item.class === node.class) {
       index++;
     }
+
     if (node === item) {
       break;
     }
@@ -21,14 +23,18 @@ function getChildIndex(node, nodes) {
 }
 
 function scanNode(nodes) {
+
   if (!isScan) {
+
     if (!nodes) {
       return;
     }
+
     for (let i = 0; i < nodes.length; i++) {
       let current = nodes[i];
       arrKeyAttrs.forEach(attr => {
         let value = current[attr];
+
         if (value) {
           switch (attr) {
             case 'resource-id':
@@ -58,36 +64,36 @@ export default function getXpath(tree, nodePath, isIOS) {
   const paths = [0, ...nodePath];
 
   if (isIOS) {
+
     for (let i = 0; i < paths.length; i++) {
       let current = nodes[paths[i]];
       let index = getChildIndex(current, nodes);
-
-      if (current.class !== 'MacacaAppInspectorRoot') {
-        array.push('XCUIElementType' + current.class + '[' + index + ']');
-      }
+      array.push(`XCUIElementType${current.class}[${index}]`);
       nodes = current.nodes;
     }
 
-    return '//' + array.join('/');
+    return `//${array.join('/')}`;
   } else {
     let XPath = '';
+
     for (let i = 0; i < paths.length; i++) {
       let current = nodes[paths[i]];
       let resourceId = current['resource-id'];
       let name = current['name'];
       let text = current['text'];
       let index = getChildIndex(current, nodes);
+
       if (resourceId && mapIdCount[resourceId] === 1) {
-        XPath = '/*[@resource-id="' + resourceId + '"]';
+        XPath = `/*[@resource-id="${resourceId}"]`;
       } else if (name && mapNameCount[name] === 1) {
-        XPath = '/*[@name="' + name + '"]';
+        XPath = `/*[@name="${name}"]`;
       } else if (text && mapTextCount[text] === 1) {
-        XPath = '/*[@text="' + text + '"]';
+        XPath = `/*[@text="${text}"]`;
       } else {
-        XPath = XPath + '/' + current.class + '[' + index + ']';
+        XPath = `${XPath}/${current.class}/[${index}]`;
       }
       nodes = current.nodes;
     }
-    return '/' + XPath;
+    return `/${XPath}`;
   }
 };
