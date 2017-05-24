@@ -1,8 +1,9 @@
 import 'es6-promise';
 import 'whatwg-fetch';
-import ReactDOM from 'react-dom';
 import React from 'react';
-import App from './components/index';
+import ReactDOM from 'react-dom';
+
 import './index.less';
+import App from './components/index';
 
 ReactDOM.render(<App/>, document.getElementById('app'));
