@@ -101,7 +101,7 @@ export default function getXpath(tree, nodePath, isIOS) {
       XPath = `/*[@text="${text}"]`;
     } else {
       if (current.class !== androidRootName) {
-        XPath = `${XPath}/${isIOS ? 'XCUIElementType' : ''}${current.class}/[${index}]`;
+        XPath = `${XPath}/${isIOS ? 'XCUIElementType' : ''}${current.class}[${index}]`;
       }
     }
     nodes = current.nodes;
