@@ -8,11 +8,40 @@
 
     > label {
       width: 100px;
+      position: relative;
     }
+
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+    .xpath:before {
+      display: block;
+      content: '?';
+      position: absolute;
+      top: 0;
+      left: 40px;
+      color: rgb(255, 102, 0);
+      font-weight: 600;
+      cursor: pointer;
+    }
+
     > div {
       flex: 1;
       color: #678;
+      cursor: pointer;
     }
+
+  }
+
+  li:last-child {
+    color: #666;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+  }
+
+  .fadeIn {
+    opacity: 1 !important;
   }
 
 }

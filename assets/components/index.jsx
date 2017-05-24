@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import Screen from './screen';
+
 import Tree from './tree';
 import Info from './info';
+import Screen from './screen';
 import AppInfo from './app-info';
-import { getNodePathByXY } from '../libs/bounds';
 import getXPath from '../libs/xpath';
+import { getNodePathByXY } from '../libs/bounds';
 
 const { appData } = window;
 
