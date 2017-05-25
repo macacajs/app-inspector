@@ -1,4 +1,10 @@
-**真机问题先参考 https://testerhome.com/topics/5953**
+Environment check:
+
+``` bash
+npm i macaca-cli -g && macaca doctor
+```
+
+---
 
 - app inspector version / 版本号:
 
