@@ -4,7 +4,10 @@ import Tree from './tree';
 import Info from './info';
 import Screen from './screen';
 import AppInfo from './app-info';
-import getXPath from '../libs/xpath';
+import {
+  getXPath,
+  getXPathLite
+} from '../libs/xpath';
 import { getNodePathByXY } from '../libs/bounds';
 
 const { appData } = window;
@@ -17,6 +20,7 @@ class App extends Component {
     this.state = {
       node: null,
       tree: null,
+      xpath_lite: null,
       xpath: null,
       focusBounds: null,
       treeViewPortWidth: null,
@@ -45,7 +49,8 @@ class App extends Component {
     this.setState({
       node,
       focusBounds: node.bounds,
-      xpath: getXPath(tree, nodePath, isIOS),
+      xpath_lite: getXPathLite(tree, nodePath, isIOS),
+      xpath: getXPath(tree, nodePath, isIOS)
     });
     this.resizeTreeViewport();
   }
@@ -108,7 +113,11 @@ class App extends Component {
               </div>
               { this.state.node ? (
                 <div className="flex-col">
-                  <Info node={this.state.node} xpath={this.state.xpath}/>
+                  <Info
+                    node={ this.state.node }
+                    xpath={ this.state.xpath }
+                    xpath_lite={ this.state.xpath_lite }
+                  />
                 </div>
               ) : null }
             </div>

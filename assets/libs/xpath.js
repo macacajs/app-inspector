@@ -71,7 +71,7 @@ function scanNode(nodes) {
   }
 }
 
-export default function getXpath(tree, nodePath, isIOS) {
+export function getXPathLite(tree, nodePath, isIOS) {
 
   scanNode([tree]);
   isScan = true;
@@ -107,4 +107,24 @@ export default function getXpath(tree, nodePath, isIOS) {
     nodes = current.nodes;
   }
   return `/${XPath}`;
+};
+
+export function getXPath(tree, nodePath, isIOS) {
+  const array = [];
+  let nodes = [tree];
+  const paths = [0, ...nodePath];
+
+  for (let i = 0; i < paths.length; i++) {
+    let current = nodes[paths[i]];
+    let index = getChildIndex(current, nodes);
+
+    const tagName = (isIOS ? 'XCUIElementType' : '') + current.class;
+
+    if (current.class !== androidRootName) {
+      array.push(`${tagName}[${index}]`);
+    }
+    nodes = current.nodes;
+  }
+
+  return `//${array.join('/')}`;
 };

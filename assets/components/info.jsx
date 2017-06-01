@@ -30,6 +30,9 @@ export default class App extends PureComponent {
     }));
 
     array.push({
+      key: 'xpath_lite',
+      text: this.props.xpath_lite
+    }, {
       key: 'xpath',
       text: this.props.xpath
     });
