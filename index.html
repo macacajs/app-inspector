@@ -80,7 +80,7 @@
 <h2 id="get-id-ios">iOS</h2>
 <h3>From command line</h3>
 <pre>
-<code>xcrun simctl list</code>
+<code>$ xcrun simctl list</code>
 </pre>
 <p>
   The command above will list all your iOS simulator devices infomation.
@@ -95,15 +95,20 @@
 <h3>From command line</h3>
 <p>Launch your device firstly, then use adb to list all your devices.</p>
 <pre>
-<code>adb devices</code>
+<code>$ adb devices</code>
 </pre>
 <pre>
 <code>123ABCDEFG	device
 192.168.0.100:5555	device</code>
 </pre>
 
-<h1 id="get-id">Real iOS device</h1>
-see <a href="https://testerhome.com/topics/5953">https://testerhome.com/topics/5953</a>.
+<h2>iOS Real Device</h2>
+
+<pre>
+<code>$ DEVELOPMENT_TEAM_ID=TEAM_ID npm i app-inspector -g</code>
+</pre>
+
+<img src="http://wx1.sinaimg.cn/large/6d308bd9gy1fg7cnt9hf6j20t70h7782.jpg">
 
 </section>
 

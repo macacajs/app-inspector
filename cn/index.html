@@ -80,7 +80,7 @@
 <h2 id="get-id-ios">iOS</h2>
 <h3>命令行方式</h3>
 <pre>
-<code>xcrun simctl list</code>
+<code>$ xcrun simctl list</code>
 </pre>
 <p>
   这行命令会列出你的所以模拟器信息，里面有类似 XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX 的代码，就是模拟器 UDID。
@@ -95,16 +95,20 @@
 <h3>从命令行</h3>
 <p>先启动你的设备，然后使用 adb 命令查看设备信息：</p>
 <pre>
-<code>adb devices</code>
+<code>$ adb devices</code>
 </pre>
 <pre>
 <code>123ABCDEFG	device
 192.168.0.100:5555	device</code>
 </pre>
 
-<h1 id="get-id">iOS 真机问题</h1>
-参考 <a href="https://testerhome.com/topics/5953">https://testerhome.com/topics/5953</a>.
+<h2>iOS 真机问题</h2>
 
+<pre>
+<code>$ DEVELOPMENT_TEAM_ID=TEAM_ID npm i app-inspector -g</code>
+</pre>
+
+<img src="http://wx1.sinaimg.cn/large/6d308bd9gy1fg7cnt9hf6j20t70h7782.jpg">
 
 </section>
 
