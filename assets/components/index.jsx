@@ -95,31 +95,33 @@ class App extends Component {
             <div className="main">
               <div className="flex-col">
                 <Screen
-                  frame={this.state.focusBounds}
-                  onClick={this.handleCanvasClick.bind(this)}
-                  isIOS={this.state.isIOS}
+                  frame={ this.state.focusBounds }
+                  onClick={ this.handleCanvasClick.bind(this) }
+                  isIOS={ this.state.isIOS }
                   src={ this.state.isIOS ? '/ios-screenshot.png' : '/android-screenshot.png' }
                 />
               </div>
               <div className="flex-col" ref="treeScroller">
                 <Tree
                   ref="tree"
-                  width={this.state.treeViewPortWidth}
-                  onSelect={this.handleTreeSelect.bind(this)}
-                  onNodeMouseEnter={this.handleMouseEnter.bind(this)}
-                  onNodeMouseLeave={this.handleMouseLeave.bind(this)}
-                  initialData={this.state.tree}
+                  width={ this.state.treeViewPortWidth }
+                  onSelect={ this.handleTreeSelect.bind(this) }
+                  onNodeMouseEnter={ this.handleMouseEnter.bind(this) }
+                  onNodeMouseLeave={ this.handleMouseLeave.bind(this) }
+                  initialData={ this.state.tree }
                 />
               </div>
-              { this.state.node ? (
-                <div className="flex-col">
-                  <Info
-                    node={ this.state.node }
-                    xpath={ this.state.xpath }
-                    xpath_lite={ this.state.xpath_lite }
-                  />
-                </div>
-              ) : null }
+              {
+                this.state.node ? (
+                  <div className="flex-col">
+                    <Info
+                      node={ this.state.node }
+                      xpath={ this.state.xpath }
+                      xpath_lite={ this.state.xpath_lite }
+                    />
+                  </div>
+                ) : null
+              }
             </div>
           ) : (
             <div className="loading">Waiting Device start...</div>

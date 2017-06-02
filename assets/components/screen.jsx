@@ -82,15 +82,15 @@ export default class Screen extends PureComponent {
     return (
       <div className="screen">
         <canvas
-          width={this.state.width}
-          height={this.state.height}
-          onClick={this.handleClick.bind(this)}
+          width={ this.state.width }
+          height={ this.state.height }
+          onClick={ this.handleClick.bind(this) }
           onMouseDown={e => e.preventDefault()}
           ref="canvas"
         />
         <img ref="image"
-          onLoad={this.handleImageLoad.bind(this)}
-          src={this.props.src}
+          onLoad={ this.handleImageLoad.bind(this) }
+          src={ this.props.src }
         />
       </div>
     );

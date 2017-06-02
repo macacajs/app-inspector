@@ -1,5 +1,10 @@
 export function boundsSize(bounds) {
-  const [x, y, width, height] = bounds;
+  const [
+    x,
+    y,
+    width,
+    height
+  ] = bounds;
   return width * height;
 };
 
@@ -8,7 +13,12 @@ export function compareBoundsSize(rectA, rectB) {
 };
 
 export function isInRect(x, y, bounds) {
-  const [_x, _y, width, height] = bounds;
+  const [
+    _x,
+    _y,
+    width,
+    height
+  ] = bounds;
 
   return x >= _x
     && x <= _x + width
@@ -23,6 +33,7 @@ export function getNodePathByXY(tree, isIOS, x, y) {
   function walk(node, path) {
     let bounds = node.bounds;
     let inRect = isInRect(x, y, bounds);
+
     if (inRect) {
       if (!bestBounds || compareBoundsSize(bestBounds, bounds)) {
         bestBounds = bounds;

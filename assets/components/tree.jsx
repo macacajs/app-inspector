@@ -6,13 +6,13 @@ const TreeNodeList = (props) => (
   <ul className="tree-list">
     {
       props.nodes.map((node, index) => (
-        <li key={index}>
+        <li key={ index }>
           <TreeNode
-            onUpdate={props.onUpdate}
-            onMouseEnter={props.onMouseEnter}
-            onMouseLeave={props.onMouseLeave}
-            path={props.path.concat([index])}
-            data={node}/>
+            onUpdate={ props.onUpdate }
+            onMouseEnter={ props.onMouseEnter }
+            onMouseLeave={ props.onMouseLeave }
+            path={ props.path.concat([index]) }
+            data={ node }/>
         </li>
       ))
     }
@@ -74,14 +74,14 @@ class TreeNode extends PureComponent {
         'tree-selected': data.$selected
       }) }>
         <div className="tree-line"
-          onClick={this.handleSelect.bind(this)}
-          onMouseEnter={this.handleMouseEnter.bind(this)}
-          onMouseLeave={this.handleMouseLeave.bind(this)}
+          onClick={ this.handleSelect.bind(this) }
+          onMouseEnter={ this.handleMouseEnter.bind(this) }
+          onMouseLeave={ this.handleMouseLeave.bind(this) }
           >
           <span className="tree-indent" style={{
             width: props.path.length * 20 + 'px'
           }}></span>
-          <span className="tree-trigger" onClick={this.handleTagClick.bind(this)}></span>
+          <span className="tree-trigger" onClick={ this.handleTagClick.bind(this) }></span>
           <span className="tree-tag-open">
             { this.openTag(data) }
           </span>
@@ -100,17 +100,17 @@ class TreeNode extends PureComponent {
           childrenCount && data.$open ? (
             [
               <TreeNodeList
-                nodes={data.nodes}
-                path={props.path}
-                onUpdate={props.onUpdate}
-                onMouseEnter={props.onMouseEnter}
-                onMouseLeave={props.onMouseLeave}
+                nodes={ data.nodes }
+                path={ props.path }
+                onUpdate={ props.onUpdate }
+                onMouseEnter={ props.onMouseEnter }
+                onMouseLeave={ props.onMouseLeave }
                 key="list"
               />,
               <div className="tree-line"
-                onClick={this.handleSelect.bind(this)}
-                onMouseEnter={this.handleMouseEnter.bind(this)}
-                onMouseLeave={this.handleMouseLeave.bind(this)}
+                onClick={ this.handleSelect.bind(this) }
+                onMouseEnter={ this.handleMouseEnter.bind(this) }
+                onMouseLeave={ this.handleMouseLeave.bind(this) }
                 key="end"
                 >
                 <span className="tree-indent" style={{
@@ -239,11 +239,11 @@ export default class Tree extends PureComponent {
         width: this.props.width ? this.props.width + 'px' : 'auto'
       }}>
         <TreeNode
-          onMouseEnter={this.props.onNodeMouseEnter}
-          onMouseLeave={this.props.onNodeMouseLeave}
-          onUpdate={this.handleNodeUpdate.bind(this)}
-          path={[]}
-          data={this.state.data}
+          onMouseEnter={ this.props.onNodeMouseEnter }
+          onMouseLeave={ this.props.onNodeMouseLeave }
+          onUpdate={ this.handleNodeUpdate.bind(this) }
+          path={ [] }
+          data={ this.state.data }
         />
       </div>
     );
