@@ -89,16 +89,17 @@ export function getXPathLite(tree, nodePath, isIOS) {
     let text = current['text'];
     let value = current['value'];
     let rawIndentifier = current['rawIndentifier'];
+
     let index = getChildIndex(current, nodes);
 
-    if (resourceId && mapIdCount[resourceId] === 1) {
-      XPath = `/*[@resource-id="${resourceId}"]`;
-    } else if (rawIndentifier && mapRawIndentifierCount[rawIndentifier] === 1) {
-      XPath = `/*[@name="${rawIndentifier}"]`;
-    } else if (name && mapNameCount[name] === 1) {
-      XPath = `/*[@name="${name}"]`;
-    } else if (text && mapTextCount[text] === 1) {
-      XPath = `/*[@text="${text}"]`;
+    if (resourceId && mapIdCount[resourceId] === 1 && resourceId.trim()) {
+      XPath = `/*[@resource-id="${resourceId.trim()}"]`;
+    } else if (rawIndentifier && mapRawIndentifierCount[rawIndentifier] === 1 && rawIndentifier.trim()) {
+      XPath = `/*[@name="${rawIndentifier.trim()}"]`;
+    } else if (name && mapNameCount[name] === 1 && name.trim()) {
+      XPath = `/*[@name="${name.trim()}"]`;
+    } else if (text && mapTextCount[text] === 1 && text.trim()) {
+      XPath = `/*[@text="${text.trim()}"]`;
     } else {
       if (current.class !== androidRootName) {
         XPath = `${XPath}/${isIOS ? 'XCUIElementType' : ''}${current.class}[${index}]`;
