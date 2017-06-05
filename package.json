@@ -1,6 +1,6 @@
 {
   "name": "app-inspector",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "app inspector",
   "keywords": [
     "inspector",
@@ -72,7 +72,6 @@
   "license": "MIT",
   "optionalDependencies": {
     "ios-simulator": "^1.0.7",
-    "ios-utils": "^1.0.4",
     "macaca-adb": "^1.0.17",
     "uiautomatorwd": "^1.0.1",
     "xctestwd": "^1.0.7"
