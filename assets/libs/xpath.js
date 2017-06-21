@@ -102,7 +102,7 @@ export function getXPathLite(tree, nodePath, isIOS) {
       XPath = `/*[@text="${text.trim()}"]`;
     } else {
       if (current.class !== androidRootName) {
-        XPath = `${XPath}/${isIOS ? 'XCUIElementType' : ''}${current.class}[${index}]`;
+        XPath = `${XPath}/${current.class}[${index}]`;
       }
     }
     nodes = current.nodes;
