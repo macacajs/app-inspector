@@ -102,7 +102,7 @@ export function getXPathLite(tree, nodePath, isIOS) {
       XPath = `/*[@text="${text.trim()}"]`;
     } else {
       if (current.class !== androidRootName) {
-        XPath = `${XPath}/${isIOS ? 'XCUIElementType' : ''}${current.class}[${index}]`;
+        XPath = `${XPath}/${current.class}[${index}]`;
       }
     }
     nodes = current.nodes;
@@ -119,7 +119,7 @@ export function getXPath(tree, nodePath, isIOS) {
     let current = nodes[paths[i]];
     let index = getChildIndex(current, nodes);
 
-    const tagName = (isIOS ? 'XCUIElementType' : '') + current.class;
+    const tagName = current.class;
 
     if (current.class !== androidRootName) {
       array.push(`${tagName}[${index}]`);
