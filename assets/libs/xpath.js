@@ -119,7 +119,7 @@ export function getXPath(tree, nodePath, isIOS) {
     let current = nodes[paths[i]];
     let index = getChildIndex(current, nodes);
 
-    const tagName = (isIOS ? 'XCUIElementType' : '') + current.class;
+    const tagName = current.class;
 
     if (current.class !== androidRootName) {
       array.push(`${tagName}[${index}]`);
