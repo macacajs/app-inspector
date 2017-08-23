@@ -87,6 +87,7 @@ class App extends Component {
       <div className="container">
         <div className="header">
           <a href="//macacajs.github.io/inspector" target="_blank">
+            <img className="page-logo" src="//macacajs.github.io/macaca-logo/svg/monkey.svg" />
             <h1>Macaca App Inspector</h1>
           </a>
         </div>
