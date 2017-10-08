@@ -71,7 +71,7 @@ function scanNode(nodes) {
   }
 }
 
-export function getXPathLite(tree, nodePath, isIOS) {
+export function getXPathLite(tree, nodePath) {
 
   scanNode([tree]);
   isScan = true;
@@ -110,7 +110,7 @@ export function getXPathLite(tree, nodePath, isIOS) {
   return `/${XPath}`;
 };
 
-export function getXPath(tree, nodePath, isIOS) {
+export function getXPath(tree, nodePath) {
   const array = [];
   let nodes = [tree];
   const paths = [0, ...nodePath];

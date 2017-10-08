@@ -49,8 +49,8 @@ class App extends Component {
     this.setState({
       node,
       focusBounds: node.bounds,
-      xpath_lite: getXPathLite(tree, nodePath, isIOS),
-      xpath: getXPath(tree, nodePath, isIOS)
+      xpath_lite: getXPathLite(tree, nodePath),
+      xpath: getXPath(tree, nodePath)
     });
     this.resizeTreeViewport();
   }
