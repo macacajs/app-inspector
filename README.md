@@ -1,5 +1,7 @@
 # app-inspector
 
+---
+
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
 [![Test coverage][coveralls-image]][coveralls-url]
@@ -17,19 +19,19 @@
 [download-image]: https://img.shields.io/npm/dm/app-inspector.svg?style=flat-square
 [download-url]: https://npmjs.org/package/app-inspector
 
-[App-inspector](https://macacajs.github.io/app-inspector/) is a mobile UI viewer in browser.
+[App-inspector](//macacajs.github.io/app-inspector/) is a mobile UI viewer in browser.
 
 ## Installation
 
 App-inspector is distibuted through npm. To install it, run the following command line:
 
-```shell
-$ npm install app-inspector -g
+``` bash
+$ npm i app-inspector -g
 ```
 
 ## Usage
 
-```shell
+``` bash
 $ app-inspector -u xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
