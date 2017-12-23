@@ -4,7 +4,7 @@ We love pull requests from everyone.
 
 ## Link Global To Local
 
-``` bash
+```bash
 $ cd path/to/app-inspector
 $ npm link
 # now project app-inspector is linked to your global

@@ -3,13 +3,16 @@
 'use strict';
 
 const co = require('co');
-const chalk = require('chalk');
 const program = require('commander');
 const update = require('npm-update');
 
 const pkg = require('../package.json');
 const _ = require('../lib/common/helper');
 const logger = require('../lib/common/logger');
+
+const {
+  chalk
+} = _;
 
 const Inspector = require('..');
 
