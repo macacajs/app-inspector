@@ -1,4 +1,7 @@
-import React, { PureComponent } from 'react';
+import React, {
+  PureComponent
+} from 'react';
+
 import './screen.less';
 
 // TODO: should by device name.

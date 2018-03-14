@@ -5,6 +5,9 @@
 
   li {
     display: flex;
+    font-size: 14px;
+    border-top: 1px solid #eee;
+    padding: 2px 0;
 
     > label {
       width: 100px;
@@ -38,6 +41,10 @@
     color: #666;
     opacity: 0;
     transition: opacity 0.8s ease;
+  }
+
+  li:nth-last-child(2) {
+    border-bottom: 1px solid #eee;
   }
 
   .fadeIn {

@@ -77,11 +77,11 @@ class TreeNode extends PureComponent {
           onClick={ this.handleSelect.bind(this) }
           onMouseEnter={ this.handleMouseEnter.bind(this) }
           onMouseLeave={ this.handleMouseLeave.bind(this) }
-          >
+        >
           <span className="tree-indent" style={{
             width: props.path.length * 20 + 'px'
-          }}></span>
-          <span className="tree-trigger" onClick={ this.handleTagClick.bind(this) }></span>
+          }} />
+          <span className="tree-trigger" onClick={ this.handleTagClick.bind(this) } />
           <span className="tree-tag-open">
             { this.openTag(data) }
           </span>
@@ -112,10 +112,10 @@ class TreeNode extends PureComponent {
                 onMouseEnter={ this.handleMouseEnter.bind(this) }
                 onMouseLeave={ this.handleMouseLeave.bind(this) }
                 key="end"
-                >
+              >
                 <span className="tree-indent" style={{
                   width: props.path.length * 20 + 'px'
-                }}></span>
+                }} />
                 <span className="tree-tag-close">
                   { this.closeTag(data) }
                 </span>
@@ -173,7 +173,9 @@ export default class Tree extends PureComponent {
      * if a node will expand
      * it's all ancestors will expand too.
      */
-    const bubble = updater.$open ? { $open: true } : null;
+    const bubble = updater.$open ? {
+      $open: true
+    } : null;
     updateResult = this.updateDate(updateResult.root, nodePath, updater, bubble);
 
     this.setState({
@@ -203,6 +205,7 @@ export default class Tree extends PureComponent {
     let index;
 
     let bubbleUpdater;
+
     if (bubble === true) {
       bubbleUpdater = updater;
     } else if (bubble) {
