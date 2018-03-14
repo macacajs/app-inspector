@@ -1,5 +1,15 @@
-import React, { PureComponent } from 'react';
-import { className, pick } from '../libs/utils';
+import React, {
+  PureComponent,
+} from 'react';
+
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { docco } from 'react-syntax-highlighter/styles/hljs';
+
+import {
+  className,
+  pick,
+} from '../libs/utils';
+
 import './tree.less';
 
 const TreeNodeList = (props) => (
@@ -134,7 +144,8 @@ export default class Tree extends PureComponent {
   constructor(props) {
     super();
     this.state = {
-      data: this.expandShallow(props.initialData, 5)
+      data: this.expandShallow(props.initialData, 5),
+      isTreeView: true,
     };
     window.tree = this;
   }
@@ -236,18 +247,35 @@ export default class Tree extends PureComponent {
     };
   }
 
+  onViewButtonClick() {
+    this.setState({
+      isTreeView: !this.state.isTreeView
+    })
+  }
+
   render() {
     return (
       <div className="list-view" style={{
         width: this.props.width ? this.props.width + 'px' : 'auto'
       }}>
-        <TreeNode
-          onMouseEnter={ this.props.onNodeMouseEnter }
-          onMouseLeave={ this.props.onNodeMouseLeave }
-          onUpdate={ this.handleNodeUpdate.bind(this) }
-          path={ [] }
-          data={ this.state.data }
-        />
+        <p className="view-source" onClick={ this.onViewButtonClick.bind(this) }>{ this.state.isTreeView ? 'View Source' : 'View Tree' }</p>
+        {
+          this.state.isTreeView ?
+          <TreeNode
+            onMouseEnter={ this.props.onNodeMouseEnter }
+            onMouseLeave={ this.props.onNodeMouseLeave }
+            onUpdate={ this.handleNodeUpdate.bind(this) }
+            path={ [] }
+            data={ this.state.data }
+          /> :
+          <SyntaxHighlighter
+            language='json'
+            style={docco}
+            showLineNumbers={true}
+          >
+            { JSON.stringify(this.state.data, null, 2) }
+          </SyntaxHighlighter>
+        }
       </div>
     );
   }
