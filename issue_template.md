@@ -1,7 +1,7 @@
 Environment check:
 
-``` bash
-npm i macaca-cli -g && macaca doctor
+```bash
+$ npm i macaca-cli -g && macaca doctor
 ```
 
 ---
@@ -16,10 +16,6 @@ npm i macaca-cli -g && macaca doctor
 
 
 - terminal log / 终端输出信息:
-
-```
-
-```
 
 > try `app-inspector -u xxxx --verbose` for more log detail.
 
