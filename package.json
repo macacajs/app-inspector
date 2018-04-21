@@ -40,7 +40,7 @@
     "command-line-test": "^1.0.5",
     "css-loader": "^0.24.0",
     "es6-promise": "^3.2.1",
-    "git-contributor": "^1.0.0",
+    "git-contributor": "^1.0.7",
     "istanbul": "*",
     "jshint": "*",
     "json-loader": "^0.5.4",
