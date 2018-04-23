@@ -21,6 +21,8 @@
 
 [App-inspector](//macacajs.github.io/app-inspector/) is a mobile UI viewer in browser.
 
+![](http://ww4.sinaimg.cn/large/7dfcf2f7gw1f77ev6csw5g20s50iwe81.gif)
+
 ## Installation
 
 App-inspector is distibuted through npm. To install it, run the following command line:
