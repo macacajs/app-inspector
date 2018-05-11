@@ -30,7 +30,7 @@ App-inspector is distibuted through npm. To install it, run the following comman
 ```bash
 $ npm i app-inspector -g
 ```
-
+Note: If you are going to use app-inspector on real iOS device, see [iOS Real Device section](#ios-real-device)
 ## Usage
 
 ```bash
@@ -47,9 +47,10 @@ Visit https://macacajs.github.io/app-inspector/ for more information.
 - [iOS](http://ww4.sinaimg.cn/large/7dfcf2f7gw1f7bwp1mgiyg20s40kg7wh.gif)
 
 ### iOS Real Device
-
+First, find the Development Team ID as shown on image below.
 ![](http://wx1.sinaimg.cn/large/6d308bd9gy1fg7cnt9hf6j20t70h7782.jpg)
 
+Run this command where TEAM_ID is your ID from the first step
 ```bash
 $ DEVELOPMENT_TEAM_ID=TEAM_ID npm i app-inspector -g
 ```
