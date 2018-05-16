@@ -6,4 +6,5 @@ assets/
 coverage/
 *.sw*
 *.un~
+.nyc_output
 .temp

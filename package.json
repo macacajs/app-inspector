@@ -43,13 +43,12 @@
     "eslint": "^4.19.1",
     "eslint-plugin-mocha": "^5.0.0",
     "git-contributor": "^1.0.8",
-    "istanbul": "*",
-    "jshint": "*",
     "json-loader": "^0.5.4",
     "koa-webpack-dev-middleware": "^1.2.2",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "mocha": "*",
+    "nyc": "^11.8.0",
     "pre-commit": "1.1.1",
     "react": "^15.2.1",
     "react-copy-to-clipboard": "^5.0.0",
@@ -60,14 +59,14 @@
     "whatwg-fetch": "^1.0.0"
   },
   "scripts": {
-    "test": "mocha .",
+    "test": "nyc --reporter=lcov --reporter=text mocha",
     "lint": "eslint --fix .",
     "start": "APP_INSPECTOR=dev ./bin/app-inspector -u UID --verbose",
     "build": "webpack -p",
     "watch": "webpack --watch",
     "prepublish": "npm run build",
     "contributor": "git-contributor",
-    "ci": "npm run lint && npm run build"
+    "ci": "npm run lint && npm run build && npm run test"
   },
   "pre-commit": [
     "lint"
