@@ -1,8 +1,8 @@
 node_modules
 .travis.yml
 assets/
-.jshintrc
-.jshintignore
+.eslintrc
+.eslintignore
 coverage/
 *.sw*
 *.un~
