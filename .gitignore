@@ -2,10 +2,11 @@
 node_modules
 npm-debug.log
 *.sw*
+*.un~
 .idea/*
 Thumbs.db
 coverage/
 build/
-*.un~
+.nyc_output
 .temp
 public/dist

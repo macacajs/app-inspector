@@ -1,8 +1,10 @@
+'use strict';
+
 const path = require('path');
 
 module.exports = {
   entry: {
-    index: path.resolve(__dirname, './assets/index'),
+    index: path.resolve(__dirname, './assets/index')
   },
   output: {
     path: path.resolve(__dirname, 'public/dist'),
