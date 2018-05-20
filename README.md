@@ -14,14 +14,14 @@
 [travis-url]: https://travis-ci.org/macacajs/app-inspector
 [coveralls-image]: https://img.shields.io/coveralls/macacajs/app-inspector.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/r/macacajs/app-inspector?branch=master
-[node-image]: https://img.shields.io/badge/node.js-%3E=_4-green.svg?style=flat-square
+[node-image]: https://img.shields.io/badge/node.js-%3E=_8-green.svg?style=flat-square
 [node-url]: http://nodejs.org/download/
 [download-image]: https://img.shields.io/npm/dm/app-inspector.svg?style=flat-square
 [download-url]: https://npmjs.org/package/app-inspector
 
 [App-inspector](//macacajs.github.io/app-inspector/) is a mobile UI viewer in browser.
 
-![](http://ww4.sinaimg.cn/large/7dfcf2f7gw1f77ev6csw5g20s50iwe81.gif)
+![](https://ww4.sinaimg.cn/large/7dfcf2f7gw1f77ev6csw5g20s50iwe81.gif)
 
 ## Installation
 
@@ -45,13 +45,14 @@ Visit https://macacajs.github.io/app-inspector/ for more information.
 
 ## Demo
 
-- [Android](http://ww4.sinaimg.cn/large/7dfcf2f7gw1f7bwlhpakwg20s40kge3k.gif)
-- [iOS](http://ww4.sinaimg.cn/large/7dfcf2f7gw1f7bwp1mgiyg20s40kg7wh.gif)
+- [Android](https://ww4.sinaimg.cn/large/7dfcf2f7gw1f7bwlhpakwg20s40kge3k.gif)
+- [iOS](https://ww4.sinaimg.cn/large/7dfcf2f7gw1f7bwp1mgiyg20s40kg7wh.gif)
 
 ### iOS Real Device
 
 First, find the Development Team ID as shown on image below.
-![](http://wx1.sinaimg.cn/large/6d308bd9gy1fg7cnt9hf6j20t70h7782.jpg)
+
+![](https://wx1.sinaimg.cn/large/6d308bd9gy1fg7cnt9hf6j20t70h7782.jpg)
 
 Run this command where TEAM_ID is your ID from the first step.
 
