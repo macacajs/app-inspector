@@ -1,7 +1,10 @@
 'use strict';
 
+const {
+  EOL,
+} = require('os');
 const path = require('path');
-const EOL = require('os').EOL;
+const assert = require('assert');
 const CliTest = require('command-line-test');
 
 const utils = require('./utils');
@@ -17,19 +20,19 @@ describe('command line test', function() {
   it('`app-inspector -v` should be ok', function *() {
     var cliTest = new CliTest();
     var res = yield cliTest.execFile(binFile, ['-v'], {});
-    res.stdout.should.containEql(pkg.version);
+    assert.ok(res.stdout.includes(pkg.version));
   });
 
   it('`app-inspector -h` should be ok', function *() {
     var cliTest = new CliTest();
     var res = yield cliTest.execFile(binFile, ['-h'], {});
     var lines = res.stdout.trim().split(EOL);
-    lines[0].should.containEql(pkg.name);
+    assert.ok(lines[0].includes(pkg.name));
   });
 
   it('app-inspector start should be ok', function *() {
     var device = yield utils.getDevices();
     var res = yield utils.getOutPut(device.udid);
-    res.should.containEql(startString);
+    assert.ok(res.includes(startString));
   });
 });
