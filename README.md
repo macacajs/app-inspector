@@ -10,7 +10,7 @@
 
 [npm-image]: https://img.shields.io/npm/v/app-inspector.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/app-inspector
-[travis-image]: https://img.shields.io/travis/macacajs/app-inspector.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/macacajs/app-inspector.svg?style=flat-square&logo=travis
 [travis-url]: https://travis-ci.org/macacajs/app-inspector
 [coveralls-image]: https://img.shields.io/coveralls/macacajs/app-inspector.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/r/macacajs/app-inspector?branch=master
