@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import GitHubButton from 'react-github-button';
+
+import 'react-github-button/assets/style.css';
 
 import Tree from './tree';
 import Info from './info';
@@ -89,6 +92,11 @@ class App extends Component {
           <a href="//macacajs.github.io/inspector" target="_blank">
             <img className="page-logo" src="//npmcdn.com/macaca-logo@latest/svg/monkey.svg" />
             <h1>Macaca App Inspector</h1>
+            <GitHubButton
+              type="stargazers"
+              namespace="macacajs"
+              repo="app-inspector"
+            />
           </a>
         </div>
         {

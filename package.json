@@ -1,6 +1,6 @@
 {
   "name": "app-inspector",
-  "version": "2.0.19",
+  "version": "2.0.20",
   "description": "app inspector",
   "keywords": [
     "inspector",
@@ -18,7 +18,7 @@
     "co": "^4.6.0",
     "co-request": "^1.0.0",
     "commander": "^2.9.0",
-    "detect-port": "^1.0.0",
+    "detect-port": "1",
     "koa": "^1.2.1",
     "koa-bodyparser": "^2.2.0",
     "koa-router": "^5.4.0",
@@ -29,7 +29,7 @@
     "request": "^2.74.0",
     "xlogger": "^1.0.4",
     "xml2map": "^1.0.2",
-    "xutil": "^1.0.2"
+    "xutil": "1"
   },
   "devDependencies": {
     "babel-core": "^6.13.2",
@@ -51,6 +51,7 @@
     "pre-commit": "1.1.1",
     "react": "^15.2.1",
     "react-copy-to-clipboard": "^5.0.0",
+    "react-github-button": "0.1.11",
     "react-dom": "^15.2.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
