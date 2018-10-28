@@ -21,6 +21,18 @@
 
 [App-inspector](//macacajs.github.io/app-inspector/) is a mobile UI viewer in browser.
 
+<!-- GITCONTRIBUTOR_START -->
+
+## Contributors
+
+|[<img src="https://avatars1.githubusercontent.com/u/1011681?v=4" width="100px;"/><br/><sub><b>xudafeng</b></sub>](https://github.com/xudafeng)<br/>|[<img src="https://avatars3.githubusercontent.com/u/4006436?v=4" width="100px;"/><br/><sub><b>meowtec</b></sub>](https://github.com/meowtec)<br/>|[<img src="https://avatars1.githubusercontent.com/u/1044425?v=4" width="100px;"/><br/><sub><b>ziczhu</b></sub>](https://github.com/ziczhu)<br/>|[<img src="https://avatars0.githubusercontent.com/u/4576123?v=4" width="100px;"/><br/><sub><b>CodeToSurvive1</b></sub>](https://github.com/CodeToSurvive1)<br/>|[<img src="https://avatars2.githubusercontent.com/u/410850?v=4" width="100px;"/><br/><sub><b>qichuan</b></sub>](https://github.com/qichuan)<br/>|[<img src="https://avatars1.githubusercontent.com/u/11460601?v=4" width="100px;"/><br/><sub><b>zivyangll</b></sub>](https://github.com/zivyangll)<br/>
+| :---: | :---: | :---: | :---: | :---: | :---: |
+|[<img src="https://avatars0.githubusercontent.com/u/12913557?v=4" width="100px;"/><br/><sub><b>risinek</b></sub>](https://github.com/risinek)<br/>|[<img src="https://avatars3.githubusercontent.com/u/15025212?v=4" width="100px;"/><br/><sub><b>zhuyali</b></sub>](https://github.com/zhuyali)<br/>
+
+This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor), auto upated at `Tue Aug 14 2018 12:24:27 GMT+0800`.
+
+<!-- GITCONTRIBUTOR_END -->
+
 ![](https://ww4.sinaimg.cn/large/7dfcf2f7gw1f77ev6csw5g20s50iwe81.gif)
 
 ## Installation
@@ -59,18 +71,6 @@ Run this command where TEAM_ID is your ID from the first step.
 ```bash
 $ DEVELOPMENT_TEAM_ID=TEAM_ID npm i app-inspector -g
 ```
-
-<!-- GITCONTRIBUTOR_START -->
-
-## Contributors
-
-|[<img src="https://avatars1.githubusercontent.com/u/1011681?v=4" width="100px;"/><br/><sub><b>xudafeng</b></sub>](https://github.com/xudafeng)<br/>|[<img src="https://avatars3.githubusercontent.com/u/4006436?v=4" width="100px;"/><br/><sub><b>meowtec</b></sub>](https://github.com/meowtec)<br/>|[<img src="https://avatars1.githubusercontent.com/u/1044425?v=4" width="100px;"/><br/><sub><b>ziczhu</b></sub>](https://github.com/ziczhu)<br/>|[<img src="https://avatars0.githubusercontent.com/u/4576123?v=4" width="100px;"/><br/><sub><b>CodeToSurvive1</b></sub>](https://github.com/CodeToSurvive1)<br/>|[<img src="https://avatars2.githubusercontent.com/u/410850?v=4" width="100px;"/><br/><sub><b>qichuan</b></sub>](https://github.com/qichuan)<br/>|[<img src="https://avatars1.githubusercontent.com/u/11460601?v=4" width="100px;"/><br/><sub><b>zivyangll</b></sub>](https://github.com/zivyangll)<br/>
-| :---: | :---: | :---: | :---: | :---: | :---: |
-|[<img src="https://avatars0.githubusercontent.com/u/12913557?v=4" width="100px;"/><br/><sub><b>risinek</b></sub>](https://github.com/risinek)<br/>|[<img src="https://avatars3.githubusercontent.com/u/15025212?v=4" width="100px;"/><br/><sub><b>zhuyali</b></sub>](https://github.com/zhuyali)<br/>
-
-This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor), auto upated at `Tue Aug 14 2018 12:24:27 GMT+0800`.
-
-<!-- GITCONTRIBUTOR_END -->
 
 ## License
 
