@@ -61,7 +61,10 @@ class TreeNode extends PureComponent {
   }
 
   tagName() {
-    return this.props.data.class.replace('android.widget.', '');
+    if (this.props.data.class) {
+      return this.props.data.class.replace('android.widget.', '');
+    }
+    return 'unknown_class';
   }
 
   openTag() {
