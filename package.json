@@ -51,9 +51,10 @@
     "pre-commit": "1.1.1",
     "react": "^15.2.1",
     "react-copy-to-clipboard": "^5.0.0",
-    "react-github-button": "0.1.11",
     "react-dom": "^15.2.1",
+    "react-github-button": "0.1.11",
     "style-loader": "^0.13.1",
+    "vuepress": "^0.14.8",
     "webpack": "^1.13.2",
     "whatwg-fetch": "^1.0.0"
   },
@@ -65,7 +66,9 @@
     "watch": "webpack --watch",
     "prepublish": "npm run build",
     "contributor": "git-contributor",
-    "ci": "npm run lint && npm run build && npm run test"
+    "ci": "npm run lint && npm run build && npm run test",
+    "docs:dev": "vuepress dev docs_src",
+    "docs:build": "vuepress build docs_src"
   },
   "pre-commit": [
     "lint"
