@@ -19,6 +19,16 @@ module.exports = {
     },
   },
   head: [
+    ['script', {
+      async: true,
+      src: 'https://www.googletagmanager.com/gtag/js?id=UA-49226133-2',
+    }, ''],
+    ['script', {}, `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-49226133-2');
+    `]
   ],
   serviceWorker: true,
   themeConfig: {
