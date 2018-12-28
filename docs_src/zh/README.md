@@ -3,7 +3,7 @@
 home: true
 heroImage: https://macacajs.github.io/assets/icons/macaca.svg
 actionText: Try it Out →
-actionLink: /guide/zh/
+actionLink: /zh/guide/install.html
 features:
 - title: 多端支持
   details: 支持iOS 以及安卓平台，开箱即用！
