@@ -17,3 +17,4 @@ footer: MIT Licensed | Copyright © 2015-present Macaca
 # 安装
 $ npm i app-inspector -g
 ```
+
