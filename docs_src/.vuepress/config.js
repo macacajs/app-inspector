@@ -13,7 +13,7 @@ module.exports = {
       description: 'Mobile UI viewer in browser, view the UI in a tree view, and generate XPath automatically',
     },
     '/zh/': {
-      lang: 'zh',
+      lang: 'zh-CN',
       title: 'App Inspector',
       description: '浏览器端的移动设备 UI 查看器，使用树状态结构查看 UI 布局，自动生成 XPath',
     },
@@ -40,7 +40,7 @@ module.exports = {
         nav: [
           {
             text: 'Guide',
-            link: '/guide/'
+            link: '/guide/install.html'
           },
         ],
         sidebar: {
@@ -61,7 +61,7 @@ module.exports = {
         nav: [
           {
             text: '指南',
-            link: '/zh/guide/'
+            link: '/zh/guide/install.html'
           },
         ],
         sidebar: {
@@ -78,8 +78,9 @@ function genSidebarConfig(title) {
       title,
       collapsable: false,
       children: [
+        'install',
         'quick-start',
-        'configuration'
+        'get-device-id'
       ],
     },
   ];

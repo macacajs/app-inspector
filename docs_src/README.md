@@ -5,19 +5,15 @@ heroImage: https://macacajs.github.io/assets/icons/macaca.svg
 actionText: Try it Out →
 actionLink: /guide/
 features:
-- title: 多端支持
-  details: 支持iOS 以及安卓平台，开箱即用！
+- title: Cross Platform
+  details: Support iOS and Android platforms, out-of-the-box!
 footer: MIT Licensed | Copyright © 2015-present Macaca
 
 ---
 
-## 准备起航
+## Fast start
 
 ```bash
-# 安装
+# install
 $ npm i app-inspector -g
 ```
-
-::: warning 注意
-NoSmoke 要求 Node.js >= 8.
-:::

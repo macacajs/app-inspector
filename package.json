@@ -55,7 +55,7 @@
     "react-github-button": "0.1.11",
     "style-loader": "^0.13.1",
     "vuepress": "^0.14.8",
-    "webpack": "^1.13.2",
+    "webpack": "^4.28.2",
     "whatwg-fetch": "^1.0.0"
   },
   "scripts": {

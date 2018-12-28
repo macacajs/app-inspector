@@ -1,12 +1,19 @@
 # 快速开始
 
-### 1. 要求:
+## 从命令行启动
 
-* iOS 模拟器 11.0 以及 xcode 10.0 或以上.
-* Android 6.0 或以上, 支持设备以及模拟器. 对于设备，请确认使用了null keyboard 等类似的虚拟键盘工具去除键盘展示.
-* 由于目前Tesseract 的OCR 依赖，目前建议使用mac os. (后续会进一步优化).
-* 确保Tesseract 在本地环境完成正确安装: `brew install tesseract --all-languages`.
+```bash
+$ app-inspector -u YOUR-DEVICE-ID
+```
 
-### 2. 设置 & 运行:
+关于如何获取设备 ID，请查看 <a href="./get-device-id.html">获取设备 ID</a> 部分。
 
-##### **第一步.** 安装NoSmoke相关依赖
+## 打开界面
+
+你的命令行将输出如下的文字：
+
+> inspector start at: http://192.168.10.100:5678
+
+然后在浏览器里面打开输出的链接：http://192.168.10.100:5678。推荐用 Chrome 浏览器。
+
+![](http://ww4.sinaimg.cn/large/7dfcf2f7gw1f77ev6csw5g20s50iwe81.gif)
