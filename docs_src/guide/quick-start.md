@@ -1,12 +1,19 @@
-# Quick-Start
+# Quick Start
 
-### 1. Requirements:
+## Launch from cli
 
-* iOS simulator 11.0 and xcode 10.0 and above.
-* Android 6.0 and above, supporting both device and simulator. For real device testing please install null-keyboard.
-* Running on MAC OS is recommended, which provide the lowest integration cost of tesseract.
-* Ensure tesseract has been properly installed on your machine: `brew install tesseract --all-languages`.
+```bash
+$ app-inspector -u YOUR-DEVICE-ID
+```
 
-### 2. Setup & Run:
+See <a href="./get-device-id.html">Get the Device ID</a> to lean how to get the device ID.
 
-##### **Step 1.** Setup Macaca - NoSmoke dependends on the following macaca components:
+## Open Interface
+
+You will see the log information like below:
+
+> inspector start at: http://192.168.10.100:5678
+
+Then open the link http://192.168.10.100:5678 in your browser.
+
+![](https://ww4.sinaimg.cn/large/7dfcf2f7gw1f77ev6csw5g20s50iwe81.gif)
