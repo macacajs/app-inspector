@@ -2,8 +2,20 @@ language: node_js
 sudo: false
 node_js:
   - 8
+install:
+  - echo install
 script:
+  - npm i vuepress
+  - npm run docs:build
+  - cd ./docs
+  - git init
+  - git add --all .
+  - git commit -m "Travis CI Auto Builder"
+  - git push --quiet --force https://$REPO_TOKEN@github.com/macacajs/app-inspector.git master:gh-pages
+  - cd ..
   - npm i
-  - npm run ci
+  - npm run lint
+  - npm run build
+  - npm run test
 after_script:
   - npm install coveralls@2 && cat ./coverage/lcov.info | coveralls
