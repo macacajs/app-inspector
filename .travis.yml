@@ -3,7 +3,7 @@ sudo: false
 node_js:
   - 8
 install:
-  - npm i vuepress
+  - npm i --only=dev
 script:
   - npm run docs:build
   - cd ./docs
