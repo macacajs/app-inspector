@@ -3,7 +3,7 @@ sudo: false
 node_js:
   - 8
 install:
-  - npm i --only=dev
+  - npm i vuepress macaca-ecosystem
 script:
   - npm run docs:build
   - cd ./docs
