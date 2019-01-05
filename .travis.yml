@@ -3,9 +3,8 @@ sudo: false
 node_js:
   - 8
 install:
-  - echo install
-script:
   - npm i vuepress
+script:
   - npm run docs:build
   - cd ./docs
   - git init
