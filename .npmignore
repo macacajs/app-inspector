@@ -4,6 +4,8 @@ assets/
 .eslintrc
 .eslintignore
 coverage/
+docs_dist/
+docs
 *.sw*
 *.un~
 .nyc_output
