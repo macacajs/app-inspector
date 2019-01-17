@@ -67,8 +67,8 @@
     "watch": "webpack --watch",
     "prepublish": "npm run build",
     "contributor": "git-contributor",
-    "docs:dev": "vuepress dev docs_src",
-    "docs:build": "vuepress build docs_src"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "pre-commit": [
     "lint"
