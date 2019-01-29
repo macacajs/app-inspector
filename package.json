@@ -42,6 +42,7 @@
     "eslint": "^4.19.1",
     "eslint-plugin-mocha": "^5.0.0",
     "git-contributor": "^1.0.8",
+    "husky": "^1.3.1",
     "json-loader": "^0.5.4",
     "koa-webpack-dev-middleware": "^1.2.2",
     "less": "^2.7.1",
@@ -49,7 +50,6 @@
     "macaca-ecosystem": "*",
     "mocha": "*",
     "nyc": "^11.8.0",
-    "pre-commit": "1.1.1",
     "react": "^15.2.1",
     "react-copy-to-clipboard": "^5.0.0",
     "react-dom": "^15.2.1",
@@ -70,9 +70,11 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
-  "pre-commit": [
-    "lint"
-  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint"
+    }
+  },
   "homepage": "https://github.com/macacajs/app-inspector",
   "bugs": "https://github.com/macacajs/app-inspector/issues/new",
   "license": "MIT",
