@@ -4,6 +4,8 @@ node_js:
   - 8
 install:
   - npm i vuepress macaca-ecosystem
+  # https://github.com/webpack-contrib/terser-webpack-plugin/issues/66
+  - npm i terser@3.14.1
 script:
   - npm run docs:build
   - cd ./docs_dist

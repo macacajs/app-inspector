@@ -12,7 +12,7 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['', '.jsx', '.js']
+    extensions: ['.jsx', '.js']
   },
   externals: [
     {
@@ -21,23 +21,18 @@ module.exports = {
     }
   ],
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.css/,
-        loader: 'style!css'
+        loader: 'style-loader!css-loader'
       },
       {
         test: /\.less$/,
-        loader: 'style!css!less'
+        loader: 'style-loader!css-loader!less-loader'
       },
       {
         test: /\.jsx?$/,
-        loader: 'babel',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.json$/,
-        loader: 'json',
+        loader: 'babel-loader',
         exclude: /node_modules/
       }
     ]
