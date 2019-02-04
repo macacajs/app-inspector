@@ -23,11 +23,11 @@ const options = {
 const EOL = require('os').EOL;
 
 program
-  .option('-p, --port <d>',     'port to use (5678 default)')
-  .option('-u, --udid <s>',     'udid of device')
-  .option('-s, --silent',       'start without opening browser')
-  .option('--verbose',          'show more debugging information')
-  .option('-v, --versions',     'output version infomation')
+  .option('-p, --port <d>', 'port to use (5678 default)')
+  .option('-u, --udid <s>', 'udid of device')
+  .option('-s, --silent', 'start without opening browser')
+  .option('--verbose', 'show more debugging information')
+  .option('-v, --versions', 'output version infomation')
   .usage('');
 
 program.parse(process.argv);
@@ -48,6 +48,7 @@ var printInfo = function(lines) {
   console.log(chalk.white(`${EOL}${res.join(EOL)}${EOL}`));
 };
 
+// eslint-disable-next-line handle-callback-err
 function init(error, data) {
   if (data && data.version && pkg.version !== data.version) {
     printInfo([`version ${pkg.version} is outdate`, `run: npm i -g ${pkg.name}@${data.version}`]);
