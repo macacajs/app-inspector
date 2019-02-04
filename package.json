@@ -1,14 +1,14 @@
 {
   "name": "app-inspector",
-  "version": "2.0.22",
+  "version": "2.0.23",
   "description": "app inspector",
   "keywords": [
     "inspector",
     "macaca"
   ],
   "bin": {
-    "inspector": "./bin/app-inspector",
-    "app-inspector": "./bin/app-inspector"
+    "inspector": "./bin/app-inspector.js",
+    "app-inspector": "./bin/app-inspector.js"
   },
   "repository": {
     "type": "git",
