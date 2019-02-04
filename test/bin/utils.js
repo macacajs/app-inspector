@@ -5,7 +5,7 @@ const ADB = require('macaca-adb');
 const Simulator = require('ios-simulator');
 const child_process = require('child_process');
 
-const pkg = require('../package');
+const pkg = require('../../package');
 
 const binFile = path.resolve(pkg.bin[pkg.name]);
 

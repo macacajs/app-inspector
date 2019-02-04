@@ -2,9 +2,9 @@
 
 const assert = require('assert');
 
-const _ = require('../../lib/common/helper');
+const _ = require('../../../lib/common/helper');
 
-describe('common/helper.test.js', () => {
+describe('lib/common/helper.test.js', () => {
   let res;
   it('getDeviceInfo()', () => {
     res = _.getDeviceInfo('00008020-001D4D38XXXXXXXX');

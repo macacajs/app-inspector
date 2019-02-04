@@ -8,13 +8,13 @@ const assert = require('assert');
 const CliTest = require('command-line-test');
 
 const utils = require('./utils');
-const pkg = require('../package');
+const pkg = require('../../package');
 
 const binFile = path.resolve(pkg.bin[pkg.name]);
 
 const startString = 'inspector start at:';
 
-describe('command line test', function() {
+describe('test/bin/app-inspector.test.js', function() {
   this.timeout(60 * 10 * 1000);
 
   it('`app-inspector -v` should be ok', function *() {
