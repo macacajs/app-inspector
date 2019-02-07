@@ -8,12 +8,7 @@ install:
   - npm i terser@3.14.1
 script:
   - npm run docs:build
-  - cd ./docs_dist
-  - git init
-  - git add --all .
-  - git commit -m "Travis CI Auto Builder"
-  - git push --quiet --force https://$REPO_TOKEN@github.com/macacajs/app-inspector.git master:gh-pages
-  - cd ..
+  - $(npm bin)/macaca-ecosystem push --cwd ./docs_dist --branch gh-pages
   - npm i
   - npm run lint
   - npm run build
