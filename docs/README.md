@@ -6,7 +6,7 @@ actionText: Try it Out →
 actionLink: /guide/install.html
 features:
 - title: Cross Platform
-  details: Support iOS and Android platforms, out-of-the-box!
+  details: Support iOS and Android platforms
 footer: MIT Licensed | Copyright © 2015-present Macaca
 
 ---

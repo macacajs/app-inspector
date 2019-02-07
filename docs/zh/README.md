@@ -6,7 +6,7 @@ actionText: Try it Out →
 actionLink: /zh/guide/install.html
 features:
 - title: 多端支持
-  details: 支持iOS 以及安卓平台，开箱即用！
+  details: 支持iOS 以及安卓平台
 footer: MIT Licensed | Copyright © 2015-present Macaca
 
 ---
