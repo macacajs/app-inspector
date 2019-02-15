@@ -4,7 +4,7 @@
 
 To install app-inspector, [Node.js](https://nodejs.org) environment is required.
 
-[macaca-cli](https://macacajs.github.io/cli-usage.html) is recommended to install.
+[macaca-cli](https://macacajs.github.io/guide/environment-setup.html) is recommended to install.
 
 ```base
 $ npm install macaca-cli -g
