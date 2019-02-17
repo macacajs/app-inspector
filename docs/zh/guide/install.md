@@ -10,7 +10,10 @@
 $ npm install macaca-cli -g
 ```
 
-你需要准备好你需要进行查看的移动平台的环境。Android 请安装 Android SDK，iOS 安装 Xcode.
+你需要准备好你需要进行查看的移动平台的环境。
+
+请参考[Macaca 环境配置文档](https://macacajs.github.io/zh/guide/environment-setup.html)。Android 请安装 Android SDK，iOS 安装 Xcode。
+
 然后使用 macaca 命令行工具检测环境是否准备好。
 
 ```bash
