@@ -33,7 +33,7 @@ This project follows the git-contributor [spec](https://github.com/xudafeng/git-
 
 <!-- GITCONTRIBUTOR_END -->
 
-![](https://ww4.sinaimg.cn/large/7dfcf2f7gw1f77ev6csw5g20s50iwe81.gif)
+![](https://macacajs.github.io/app-inspector/assets/7dfcf2f7gw1f77ev6csw5g20s50iwe81.gif)
 
 ## Installation
 
@@ -55,16 +55,11 @@ $ app-inspector -u xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 Visit https://macacajs.github.io/app-inspector/ for more information.
 
-## Demo
-
-- [Android](https://ww4.sinaimg.cn/large/7dfcf2f7gw1f7bwlhpakwg20s40kge3k.gif)
-- [iOS](https://ww4.sinaimg.cn/large/7dfcf2f7gw1f7bwp1mgiyg20s40kg7wh.gif)
-
 ### iOS Real Device
 
 First, find the Development Team ID as shown on image below.
 
-![](https://wx1.sinaimg.cn/large/6d308bd9gy1fg7cnt9hf6j20t70h7782.jpg)
+![](https://macacajs.github.io/app-inspector/assets/6d308bd9gy1fg7cnt9hf6j20t70h7782.jpg)
 
 Run this command where TEAM_ID is your ID from the first step.
 
