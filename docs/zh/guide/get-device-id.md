@@ -33,4 +33,4 @@ $ adb devices
 $ DEVELOPMENT_TEAM_ID=TEAM_ID npm i app-inspector -g
 ```
 
-![](http://wx1.sinaimg.cn/large/6d308bd9gy1fg7cnt9hf6j20t70h7782.jpg)
+![](/app-inspector/assets/6d308bd9gy1fg7cnt9hf6j20t70h7782.jpg)

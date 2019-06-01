@@ -16,4 +16,4 @@ You will see the log information like below:
 
 Then open the link http://192.168.10.100:5678 in your browser.
 
-![](https://ww4.sinaimg.cn/large/7dfcf2f7gw1f77ev6csw5g20s50iwe81.gif)
+![](/app-inspector/assets/7dfcf2f7gw1f77ev6csw5g20s50iwe81.gif)
