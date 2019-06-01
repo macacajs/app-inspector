@@ -16,4 +16,4 @@ $ app-inspector -u YOUR-DEVICE-ID
 
 然后在浏览器里面打开输出的链接：http://192.168.10.100:5678。推荐用 Chrome 浏览器。
 
-![](http://ww4.sinaimg.cn/large/7dfcf2f7gw1f77ev6csw5g20s50iwe81.gif)
+![](/app-inspector/assets/7dfcf2f7gw1f77ev6csw5g20s50iwe81.gif)
