@@ -28,7 +28,8 @@ class App extends Component {
       focusBounds: null,
       treeViewPortWidth: null,
       isIOS: appData.isIOS,
-      serverStarted: appData.serverStarted
+      serverStarted: appData.serverStarted,
+      timer: 0,
     };
 
     window.addEventListener('resize', () => this.resizeTreeViewport());
@@ -44,6 +45,10 @@ class App extends Component {
     } else {
       setTimeout(() => location.reload(), 3000);
     }
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.timer);
   }
 
   handleTreeSelect(node, nodePath) {
@@ -75,6 +80,7 @@ class App extends Component {
     if (!nodePath) return;
     this.refs.tree.focus(nodePath);
     this.resizeTreeViewport();
+    this.updateTreeScrollerStyle();
   }
 
   resizeTreeViewport() {
@@ -83,6 +89,19 @@ class App extends Component {
         treeViewPortWidth: this.refs.treeScroller.scrollWidth
       });
     });
+  }
+
+  updateTreeScrollerStyle() {
+    clearTimeout(this.timer);
+    this.timer = setTimeout(() => {
+      const scrollTop = document.querySelectorAll('.tree-selected')[0].offsetTop;
+      const scrollLeft = document.querySelectorAll('.tree-selected .tree-indent')[0].offsetWidth;
+      this.refs.treeScroller.scrollTo({
+        left: scrollLeft - 80,
+        top: scrollTop - 100,
+        behavior: "smooth"
+      });
+    })
   }
 
   render() {
@@ -110,7 +129,7 @@ class App extends Component {
                   src={ this.state.isIOS ? '/ios-screenshot.png' : '/android-screenshot.png' }
                 />
               </div>
-              <div className="flex-col" ref="treeScroller">
+              <div className="flex-col" ref="treeScroller" style={{ position: 'relative' }}>
                 <Tree
                   ref="tree"
                   width={ this.state.treeViewPortWidth }
