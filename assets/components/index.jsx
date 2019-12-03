@@ -99,7 +99,7 @@ class App extends Component {
       this.refs.treeScroller.scrollTo({
         left: scrollLeft - 80,
         top: scrollTop - 100,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     })
   }
