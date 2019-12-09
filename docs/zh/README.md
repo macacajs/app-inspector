@@ -2,7 +2,7 @@
 
 home: true
 heroImage: https://macacajs.github.io/logo/macaca.svg
-actionText: Try it Out →
+actionText: 快速上手
 actionLink: /zh/guide/install.html
 features:
 - title: 多端支持
@@ -17,4 +17,3 @@ footer: MIT Licensed | Copyright © 2015-present Macaca
 # 安装
 $ npm i app-inspector -g
 ```
-

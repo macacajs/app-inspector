@@ -1,6 +1,10 @@
 'use strict';
 
 const path = require('path');
+const webpack = require('webpack');
+const traceFragment = require('macaca-ecosystem/lib/trace-fragment');
+
+const pkg = require('./package');
 
 module.exports = {
   entry: {
@@ -36,5 +40,11 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.VERSION': JSON.stringify(pkg.version),
+      'process.env.traceFragment': traceFragment
+    })
+  ]
 };

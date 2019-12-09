@@ -1,6 +1,6 @@
 {
   "name": "app-inspector",
-  "version": "2.0.25",
+  "version": "2.0.29",
   "description": "app inspector",
   "keywords": [
     "inspector",
@@ -53,6 +53,7 @@
     "react": "^15.2.1",
     "react-copy-to-clipboard": "^5.0.0",
     "react-dom": "^15.2.1",
+    "react-ga": "^2.7.0",
     "react-github-button": "0.1.11",
     "style-loader": "^0.13.1",
     "terser": "^3.14.1",

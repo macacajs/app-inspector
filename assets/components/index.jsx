@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga';
 import React, { Component } from 'react';
 import GitHubButton from 'react-github-button';
 
@@ -14,6 +15,12 @@ import {
 import { getNodePathByXY } from '../libs/bounds';
 
 const { appData } = window;
+
+window.addEventListener('load', () => {
+  ReactGA.initialize('UA-49226133-2');
+  ReactGA.pageview(window.location.pathname + window.location.search);
+  process.env.traceFragment;
+});
 
 class App extends Component {
 
