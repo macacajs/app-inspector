@@ -3,6 +3,7 @@
 ---
 
 [![NPM version][npm-image]][npm-url]
+[![Package quality][quality-image]][quality-url]
 [![build status][travis-image]][travis-url]
 [![Test coverage][coveralls-image]][coveralls-url]
 [![node version][node-image]][node-url]
@@ -10,6 +11,8 @@
 
 [npm-image]: https://img.shields.io/npm/v/app-inspector.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/app-inspector
+[quality-image]: https://packagequality.com/shield/app-inspector.svg
+[quality-url]: https://packagequality.com/#?package=app-inspector
 [travis-image]: https://img.shields.io/travis/macacajs/app-inspector.svg?style=flat-square&logo=travis
 [travis-url]: https://travis-ci.org/macacajs/app-inspector
 [coveralls-image]: https://img.shields.io/coveralls/macacajs/app-inspector.svg?style=flat-square
