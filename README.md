@@ -9,17 +9,17 @@
 [![node version][node-image]][node-url]
 [![npm download][download-image]][download-url]
 
-[npm-image]: https://img.shields.io/npm/v/app-inspector.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/app-inspector.svg
 [npm-url]: https://npmjs.org/package/app-inspector
 [quality-image]: https://packagequality.com/shield/app-inspector.svg
 [quality-url]: https://packagequality.com/#?package=app-inspector
-[travis-image]: https://img.shields.io/travis/macacajs/app-inspector.svg?style=flat-square&logo=travis
+[travis-image]: https://img.shields.io/travis/macacajs/app-inspector.svg?logo=travis
 [travis-url]: https://travis-ci.org/macacajs/app-inspector
-[coveralls-image]: https://img.shields.io/coveralls/macacajs/app-inspector.svg?style=flat-square
+[coveralls-image]: https://img.shields.io/coveralls/macacajs/app-inspector.svg
 [coveralls-url]: https://coveralls.io/r/macacajs/app-inspector?branch=master
-[node-image]: https://img.shields.io/badge/node.js-%3E=_8-green.svg?style=flat-square
+[node-image]: https://img.shields.io/badge/node.js-%3E=_8-green.svg
 [node-url]: http://nodejs.org/download/
-[download-image]: https://img.shields.io/npm/dm/app-inspector.svg?style=flat-square
+[download-image]: https://img.shields.io/npm/dm/app-inspector.svg
 [download-url]: https://npmjs.org/package/app-inspector
 
 [App-inspector](//macacajs.github.io/app-inspector/) is a mobile UI viewer in browser.
