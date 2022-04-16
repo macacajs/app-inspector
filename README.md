@@ -5,6 +5,7 @@
 [![NPM version][npm-image]][npm-url]
 [![Package quality][quality-image]][quality-url]
 [![build status][travis-image]][travis-url]
+[![CI][CI-image]][CI-url]
 [![Test coverage][coveralls-image]][coveralls-url]
 [![node version][node-image]][node-url]
 [![npm download][download-image]][download-url]
@@ -13,8 +14,8 @@
 [npm-url]: https://npmjs.org/package/app-inspector
 [quality-image]: https://packagequality.com/shield/app-inspector.svg
 [quality-url]: https://packagequality.com/#?package=app-inspector
-[travis-image]: https://img.shields.io/travis/macacajs/app-inspector.svg?logo=travis
-[travis-url]: https://travis-ci.org/macacajs/app-inspector
+[CI-image]: https://github.com/macacajs/app-inspector/actions/workflows/ci.yml/badge.svg
+[CI-url]: https://github.com/macacajs/app-inspector/actions/workflows/ci.yml
 [coveralls-image]: https://img.shields.io/coveralls/macacajs/app-inspector.svg
 [coveralls-url]: https://coveralls.io/r/macacajs/app-inspector?branch=master
 [node-image]: https://img.shields.io/badge/node.js-%3E=_8-green.svg
