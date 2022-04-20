@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  # allows to manually run the job at any time
+  workflow_dispatch:
+  
+  push:
+    branches:
+      - '**'
+
+jobs:
+  test:
+    name: 'Run Unit Test: node-16, macos-latest'
+    timeout-minutes: 10
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set node version to 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install deps
+        # https://github.com/webpack-contrib/terser-webpack-plugin/issues/66
+        run: |
+          npm i terser@3.14.1
+          npm install
+
+      - name: Run ci
+        run: |
+          npm run lint
+          npm run build
+          npm run test
+
+      - name: Codecov
+        uses: codecov/codecov-action@v3.0.0
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}

@@ -1,0 +1,39 @@
+name: Docs Build
+
+on:
+  # allows to manually run the job at any time
+  workflow_dispatch:
+  
+  # run on every push on the master branch
+  push:
+    branches:
+      - master
+
+jobs:
+  docs-build:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set node version to 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install deps
+        run: npm install vuepress macaca-ecosystem -D
+
+      - name: Build docs
+        run: npm run docs:build
+
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs_dist
