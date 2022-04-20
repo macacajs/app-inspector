@@ -48,7 +48,7 @@
     "less": "^2.7.1",
     "less-loader": "^4.1.0",
     "macaca-ecosystem": "*",
-    "mocha": "*",
+    "mocha": "6",
     "nyc": "^11.8.0",
     "react": "^15.2.1",
     "react-copy-to-clipboard": "^5.0.0",
@@ -63,7 +63,7 @@
     "whatwg-fetch": "^1.0.0"
   },
   "scripts": {
-    "test": "nyc --reporter=lcov --reporter=text mocha",
+    "test": "nyc --reporter=text mocha",
     "lint": "eslint --fix .",
     "start": "APP_INSPECTOR=dev ./bin/app-inspector.js -u UID --verbose",
     "build": "webpack -p",
