@@ -2,6 +2,7 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const traceFragment = require('macaca-ecosystem/lib/trace-fragment');
 
 const pkg = require('./package');
@@ -27,24 +28,62 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css/,
-        loader: 'style-loader!css-loader'
+        test: /\.jsx?/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      }, {
+        test: /\.json$/,
+        use: 'json-loader',
+        type: 'javascript/auto',
+        exclude: /node_modules/
       },
       {
         test: /\.less$/,
-        loader: 'style-loader!css-loader!less-loader'
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'less-loader',
+            options: {
+              lessOptions: {
+                javascriptEnabled: true,
+                math: 'always'
+              }
+            }
+          }
+        ]
       },
       {
-        test: /\.jsx?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
+        test: /.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          {
+            loader: 'css-loader'
+          }
+        ]
       }
     ]
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[name].css'
+    }),
     new webpack.DefinePlugin({
       'process.env.VERSION': JSON.stringify(pkg.version),
       'process.env.traceFragment': traceFragment
     })
-  ]
+  ],
+  devServer: {
+    hot: true,
+    static: {
+      directory: __dirname
+    }
+  }
 };
