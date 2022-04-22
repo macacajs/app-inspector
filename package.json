@@ -69,7 +69,7 @@
     "dev": "concurrently \"npm run watch\" \"npm run start\"",
     "test": "nyc --reporter=text mocha",
     "lint": "eslint --fix .",
-    "start": "APP_INSPECTOR=dev ./bin/app-inspector.js -u UID --verbose",
+    "start": "APP_INSPECTOR=dev ./bin/app-inspector.js -u C747A25A-0E0E-4774-B532-FEE60466A0DA --verbose",
     "build": "cross-env NODE_ENV=production webpack",
     "watch": "cross-env NODE_ENV=development webpack serve",
     "prepublish": "npm run build",
