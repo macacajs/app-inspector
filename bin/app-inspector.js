@@ -10,14 +10,14 @@ const pkg = require('../package.json');
 const _ = require('../lib/common/helper');
 
 const {
-  chalk
+  chalk,
 } = _;
 
 const Inspector = require('..');
 
 const options = {
   port: 5678,
-  verbose: true
+  verbose: true,
 };
 const EOL = require('os').EOL;
 
@@ -31,13 +31,13 @@ program
 
 program.parse(process.argv);
 
-var printInfo = function(lines) {
-  var maxLength = 0;
+const printInfo = function(lines) {
+  let maxLength = 0;
   lines.forEach(line => {
     maxLength = line.length > maxLength ? line.length : maxLength;
   });
 
-  var res = [new Array(maxLength + 7).join('*')];
+  const res = [ new Array(maxLength + 7).join('*') ];
 
   lines.forEach(line => {
     res.push(`*  ${line + new Array(maxLength - line.length + 1).join(' ')}  *`);
@@ -50,7 +50,7 @@ var printInfo = function(lines) {
 // eslint-disable-next-line handle-callback-err
 function init(error, data) {
   if (data && data.version && pkg.version !== data.version) {
-    printInfo([`version ${pkg.version} is outdate`, `run: npm i -g ${pkg.name}@${data.version}`]);
+    printInfo([ `version ${pkg.version} is outdate`, `run: npm i -g ${pkg.name}@${data.version}` ]);
   }
 
   if (program.versions) {
@@ -71,6 +71,6 @@ function init(error, data) {
 }
 
 co(update, {
-  pkg: pkg,
-  callback: init
+  pkg,
+  callback: init,
 });
