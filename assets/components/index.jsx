@@ -15,6 +15,7 @@ import {
 import { getNodePathByXY } from '../libs/bounds';
 
 const { appData } = window;
+const { isIOS, serverStarted, dumpFailed } = appData;
 
 window.addEventListener('load', () => {
   ReactGA.initialize('UA-49226133-2');
@@ -34,8 +35,6 @@ class App extends Component {
       xpath: null,
       focusBounds: null,
       treeViewPortWidth: null,
-      isIOS: appData.isIOS,
-      serverStarted: appData.serverStarted,
       timer: 0,
     };
 
@@ -43,8 +42,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    if (this.state.serverStarted) {
-      fetch(this.state.isIOS ? './ios.json' : './android.json')
+    if (serverStarted) {
+      fetch(isIOS ? './ios.json' : './android.json')
         .then(res => res.json())
         .then(tree => {
           this.setState({ tree });
@@ -59,7 +58,7 @@ class App extends Component {
   }
 
   handleTreeSelect(node, nodePath) {
-    const { tree, isIOS } = this.state;
+    const { tree } = this.state;
 
     this.setState({
       node,
@@ -83,7 +82,7 @@ class App extends Component {
   }
 
   handleCanvasClick(x, y) {
-    const nodePath = getNodePathByXY(this.state.tree, this.state.isIOS, x, y);
+    const nodePath = getNodePathByXY(this.state.tree, isIOS, x, y);
     if (!nodePath) return;
     this.refs.tree.focus(nodePath);
     this.resizeTreeViewport();
@@ -111,6 +110,16 @@ class App extends Component {
     })
   }
 
+  renderLoading() {
+    return dumpFailed ? (
+      <div className="loading">
+        Get UI Failed, <span onClick={() => location.reload()} style={{ color: '#1672f3' }}>Retry</span>...
+      </div>
+    ) : (
+      <div className="loading">Waiting Device start...</div>
+    );
+  }
+
   render() {
     return (
       <div className="container">
@@ -132,8 +141,8 @@ class App extends Component {
                 <Screen
                   frame={ this.state.focusBounds }
                   onClick={ this.handleCanvasClick.bind(this) }
-                  isIOS={ this.state.isIOS }
-                  src={ this.state.isIOS ? '/ios-screenshot.png' : '/android-screenshot.png' }
+                  isIOS={ isIOS }
+                  src={ isIOS ? '/ios-screenshot.png' : '/android-screenshot.png' }
                 />
               </div>
               <div className="flex-col" ref="treeScroller" style={{ position: 'relative' }}>
@@ -158,9 +167,7 @@ class App extends Component {
                 ) : null
               }
             </div>
-          ) : (
-            <div className="loading">Waiting Device start...</div>
-          )
+          ) : this.renderLoading()
         }
         <AppInfo/>
       </div>
