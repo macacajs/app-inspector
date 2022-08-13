@@ -1,6 +1,6 @@
 {
   "name": "app-inspector",
-  "version": "2.0.29",
+  "version": "2.1.0",
   "description": "app inspector",
   "keywords": [
     "inspector",
@@ -16,8 +16,8 @@
   },
   "files": [
     "lib/**/*.js",
-    "pubilc/**/*.js",
-    "pubilc/**/*.css",
+    "public/**/*.js",
+    "public/**/*.css",
     "view/index.html"
   ],
   "dependencies": {
@@ -87,7 +87,8 @@
     "prepublish": "npm run build",
     "contributor": "git-contributor",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "prepublishOnly": "npm run build"
   },
   "husky": {
     "hooks": {
