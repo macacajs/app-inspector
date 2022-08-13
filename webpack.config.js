@@ -9,33 +9,33 @@ const pkg = require('./package');
 
 module.exports = {
   entry: {
-    index: path.resolve(__dirname, './assets/index')
+    index: path.resolve(__dirname, './assets/index'),
   },
   output: {
     path: path.resolve(__dirname, 'public/dist'),
     publicPath: '/dist',
-    filename: '[name].js'
+    filename: '[name].js',
   },
   resolve: {
-    extensions: ['.jsx', '.js']
+    extensions: [ '.jsx', '.js' ],
   },
   externals: [
     {
-      'react': 'React',
-      'react-dom': 'ReactDOM'
-    }
+      react: 'React',
+      'react-dom': 'ReactDOM',
+    },
   ],
   module: {
     rules: [
       {
         test: /\.jsx?/,
         loader: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       }, {
         test: /\.json$/,
         use: 'json-loader',
         type: 'javascript/auto',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.less$/,
@@ -58,22 +58,22 @@ module.exports = {
           'css-loader',
         ],
       },
-    ]
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
-      chunkFilename: '[name].css'
+      chunkFilename: '[name].css',
     }),
     new webpack.DefinePlugin({
       'process.env.VERSION': JSON.stringify(pkg.version),
-      'process.env.traceFragment': traceFragment
-    })
+      'process.env.traceFragment': traceFragment,
+    }),
   ],
   devServer: {
     hot: true,
     static: {
-      directory: __dirname
-    }
-  }
+      directory: __dirname,
+    },
+  },
 };
