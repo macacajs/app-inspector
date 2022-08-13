@@ -89,8 +89,7 @@
     "contributor": "git-contributor",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "prepublishOnly": "npm run build",
-    "ci": "npm run lint && npm run test"
+    "prepublishOnly": "npm run build"
   },
   "husky": {
     "hooks": {
