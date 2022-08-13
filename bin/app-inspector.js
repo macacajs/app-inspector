@@ -8,7 +8,6 @@ const update = require('npm-update');
 
 const pkg = require('../package.json');
 const _ = require('../lib/common/helper');
-const logger = require('../lib/common/logger');
 
 const {
   chalk

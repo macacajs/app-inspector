@@ -3,7 +3,6 @@
 **/test
 **/logs
 **/coverage/
-**/build/
 **/assets/
 **/dist/
 **/docs_dist/

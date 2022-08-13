@@ -41,33 +41,23 @@ module.exports = {
         test: /\.less$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader
+            loader: 'style-loader',
           },
           {
-            loader: 'css-loader'
+            loader: 'css-loader',
           },
           {
             loader: 'less-loader',
-            options: {
-              lessOptions: {
-                javascriptEnabled: true,
-                math: 'always'
-              }
-            }
-          }
-        ]
+          },
+        ],
       },
       {
-        test: /.css$/,
+        test: /\.css$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader
-          },
-          {
-            loader: 'css-loader'
-          }
-        ]
-      }
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+        ],
+      },
     ]
   },
   plugins: [
