@@ -1,6 +1,6 @@
 {
   "name": "app-inspector",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "description": "app inspector",
   "keywords": [
     "inspector",
@@ -35,7 +35,7 @@
     "react-syntax-highlighter": "^7.0.2",
     "request": "^2.74.0",
     "xlogger": "^1.0.4",
-    "xml2map": "^1.0.2",
+    "xml2map2": "^1.0.2",
     "xutil": "1"
   },
   "devDependencies": {
